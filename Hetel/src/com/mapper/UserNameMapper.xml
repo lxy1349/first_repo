@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.UserNameMapper">
+
+<select id="findUser"  parameterType="com.po.UserName" resultType="com.po.UserName">
+		select * from username where username=#{username} and password=#{password}
+</select>
+<select id="findHetelLogol"  resultType="com.po.HetelLogol">
+		select * from hetelinformation 
+</select>
+<select id="findHetelid"  resultType="com.po.ReserveOrder">
+		select *  from   reserveorder
+</select>
+<update id="updateHetelState" parameterType="com.po.HetelLogol">
+         update hetelinformation set hetelState=#{hetelState},orderName=#{orderName} where hetelId=#{hetelId}
+</update>
+<update id="updateHetelVip" parameterType="com.po.HetelLogol">
+         update hetelinformation set vip=#{vip} where hetelId=#{hetelId}
+</update>
+
+<select id="indexByRoomState1"  resultType="com.po.HetelLogol">
+		select * from hetelinformation where hetelState=#{hetelState} and roomStyle=#{roomStyle} and floor=#{floor} order by hetelId
+</select>
+<select id="indexByRoomState2"  resultType="com.po.HetelLogol">
+		select * from hetelinformation where hetelState=#{hetelState} and roomStyle=#{roomStyle} order by hetelId
+</select>	
+<select id="indexByRoomState3"  resultType="com.po.HetelLogol">
+		select * from hetelinformation where hetelState=#{hetelState} and floor=#{floor} order by hetelId
+</select>	
+<select id="indexByRoomState4"  resultType="com.po.HetelLogol">
+		select * from hetelinformation where hetelState=#{hetelState} order by hetelId
+</select>	
+<select id="indexByRoomState5"  resultType="com.po.HetelLogol">
+		select * from hetelinformation where roomStyle=#{roomStyle} and floor=#{floor} order by hetelId
+</select>
+<select id="indexByRoomState6"  resultType="com.po.HetelLogol">
+		select * from hetelinformation where roomStyle=#{roomStyle} order by hetelId
+</select>	
+<select id="indexByRoomState7"  resultType="com.po.HetelLogol">
+		select * from hetelinformation where floor=#{floor} order by hetelId
+</select>	
+<select id="indexByRoomState8"  resultType="com.po.HetelLogol">
+		select * from hetelinformation order by hetelId
+</select>		
+<select id="indexByFormText1"  resultType="com.po.HetelLogol">
+		select * from hetelinformation where hetelId=#{hetelId} order by hetelId
+</select>	
+<select id="indexByFormText2"  resultType="com.po.HetelLogol">
+		select * from hetelinformation where orderName=#{text} order by hetelId
+</select>	
+<select id="indexfloorNum"  resultType="Integer">	
+select max(floor) from hetelinformation
+</select>
+<update id="resetRoom">
+  update hetelinformation set orderName=#{orderName},vip=#{vip},hetelState=#{hetelState} where hetelId=#{hetelId}
+</update>
+<select id="findRoomStyle" resultType="String">
+select roomType from roomoperate
+</select>
+<insert id="addRoomNum" parameterType="com.po.HetelLogol">
+insert into hetelinformation(hetelId,hetelState,roomStyle,floor) values(#{hetelId},#{hetelState},#{roomStyle},#{floor})
+</insert>
+<select id="findallRoomInforamtion"  resultType="com.po.HetelLogol">
+		select * from hetelinformation order by hetelId
+</select>	
+<select id="checkCandeleteRoomNum" resultType="int">
+     select hetelId from hetelInformation where hetelId not in(select roomid from roomorder)
+</select>
+<delete id="roomdelete">
+   delete from hetelinformation where HetelId=#{HetelId}
+</delete>
+<insert id="addNewRoomType">
+   insert into roomoperate(roomType) values(#{newRoomType})
+</insert>
+<select id="findOccupyRoomType" resultType="String">
+   select distinct roomStyle from roomorder 
+</select>
+<delete id="DeteleRoomType">
+    delete from roomoperate where roomType=#{roomType}
+</delete>
+<delete id="DeteleRoomTypeInfor">
+    delete from hetelinformation where roomStyle=#{roomType}
+</delete>
+<select id="findCanDeleteFloor" resultType="int">
+    select count(floor) from hetelInformation where hetelId not in(select roomid from roomorder) and floor=#{i}
+</select>
+<select id="findFloorNum" resultType="int">
+select count(floor) from hetelInformation where floor=#{i}
+</select>
+<select id="deleteCanDeleteFloor">
+delete from hetelInformation where floor=#{foor}
+</select>
+
+<select id="findSignInfirmation" resultType="com.po.Sign">
+select * from sign
+</select>
+ <select id="findSignInfirmationByNAme" resultType="String" parameterType="com.po.Sign">
+select sign_name from sign where sign_time &gt;=#{begin_time} and sign_time &lt; #{end_time} and sign_name=#{sign_name} and sign_state="签到" 
+</select>
+<select id="findSignOutfirmationByNAme" resultType="String" parameterType="com.po.Sign">
+select sign_name from sign where signout_time &gt;=#{begin_time} and signout_time &lt;  #{end_time} and sign_name=#{sign_name}  and sign_stateOut="签退" 
+</select>
+ <update id="updateSininInfor" parameterType="com.po.Sign">
+update sign set sign_state="签到",sign_time=#{sign_time} where signout_time &gt;=#{begin_time} and signout_time &lt; #{end_time} and sign_name=#{sign_name}  and sign_stateOut="签退"
+</update>
+ <insert id="insertSininInfor" parameterType="com.po.Sign">
+insert into sign(sign_time,sign_state,sign_name) values(#{sign_time},"签到",#{sign_name}) 
+</insert> 
+ <update id="updateSinOutInfor" parameterType="com.po.Sign">
+  update sign set sign_stateOut="签退",signout_time=#{sign_time} where sign_time &gt;=#{begin_time} and sign_time &lt; #{end_time} and sign_name=#{sign_name} and sign_state="签到"
+</update>
+ <insert id="insertSinOutInfor" parameterType="com.po.Sign">
+insert into sign(signout_time,sign_stateOut,sign_name) values(#{sign_time},"签退",#{sign_name}) 
+</insert>
+<select id="checkUser" resultType="String">
+select username from username where username=#{username}
+</select>
+<insert id="adduser">
+insert into username(username,password) values(#{username},#{password})
+</insert>
+<select id="vipCheck" parameterType="String" resultType="com.po.Vip" >
+select * from idnum where vipIdNum=#{vipIdNum}
+</select>
+<insert id="insertVip">
+insert into idnum(vipIdNum,vipName,phoneNum,radioMan) values(#{vipIdNum},#{vipName},#{phoneNum},#{radioMan})
+</insert>
+<select id="getAllVip" resultType="com.po.Vip" >
+select * from idnum 
+</select>
+<update id="vipModify" parameterType="com.po.Vip">
+update idnum set vipName=#{vipName},phoneNum=#{phoneNum},radioMan=#{radioMan} where vipIdNum=#{vipIdNum}
+</update>
+ <select id="CheckvipNum"  parameterType="String" resultType="com.po.Vip">
+select * from idnum where vipIdNum like #{val} or vipName like #{val}
+</select>
+<delete id="DeleteVipNum" parameterType="String">
+   delete from idnum where vipIdNum =#{idNum}
+</delete>
+<update id="changeHetelBad" parameterType="int">
+  update hetelinformation set hetelState="坏" where hetelId=#{hetelId}
+</update>
+<update id="changeHetelGood" parameterType="int">
+  update hetelinformation set hetelState="空" where hetelId=#{hetelId}
+</update>
+<select id="findRoomState" resultType="String">
+  select hetelState from hetelinformation where hetelId=#{hetelId};
+</select>
+</mapper>

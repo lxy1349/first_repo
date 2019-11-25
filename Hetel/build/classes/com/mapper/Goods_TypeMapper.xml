@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.Goods_TypeMapper">
+<!--主键自增长型的框架-->
+<select id="findById" parameterType="int" resultType="com.po.Goods_Type">
+	select * from goods_type where goods_type_id=#{goods_type_id}
+</select>	
+<!--主键自增长型的框架-->
+<select id="findByName" parameterType="String" resultType="com.po.Goods_Type">
+	select * from goods_type where goods_type_name=#{goods_type_name}
+</select>	
+
+
+<!--主键自增长型的框架-->
+<select id="find_all" resultType="com.po.Goods_Type">
+	select * from goods_type
+</select>	
+
+
+<!--主键自增长型的框架-->
+<insert id="add_goods_type" parameterType="com.po.Goods_Type" useGeneratedKeys="true" keyProperty="goods_type_id">
+		insert into goods_type(goods_type_name,goods_type_annotation)
+		values(#{goods_type_name},#{goods_type_annotation})
+</insert>	
+	
+<delete id="deleteGoods_TypeById" parameterType="int">
+		delete from goods_type
+		where goods_type_id = #{goods_type_id}
+</delete>
+
+
+	
+<update id="updateDiscount" parameterType="com.po.Goods_Type">
+		update goods_type set
+        goods_type_name=#{goods_type_name},goods_type_annotation=#{goods_type_annotation}
+		where goods_type_id=#{goods_type_id}
+</update>	
+	
+	
+</mapper>

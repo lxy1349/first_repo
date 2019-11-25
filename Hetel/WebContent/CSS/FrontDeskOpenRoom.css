@@ -1,0 +1,2184 @@
+/* 房间设置部分 */
+.roomSetDetelTopLayer{
+ position: absolute;
+ top: 5px;
+ left: 20px;
+ width: 1350px;
+ height: 700px;
+ z-index:150;
+}
+.roomSetDetel{
+ position: absolute;
+ background:white;
+ top:150px;
+ left:300px;
+ width:500px;
+ height:500px;
+ border-radius:5px;
+ border: solid 1px #FFC125
+}
+.roomSetDetel-Title{
+position: relative;
+background: #696969;
+height:35px;
+text-align: center;
+color:white;
+
+}
+.roomSetDetel-roomCheck{
+position: relative;
+background: #DCDCDC;
+height:20px;
+}
+.roomSetDetel-roomCheckRoomStyle{
+position: relative;
+margin-left:50px;
+width:80px;
+height:20px;
+}
+.adddetelReservationInformationDetelDateArriveText{
+	position: relative;
+	float:left;
+}
+.roomSetDetel-roomCheckRoomPrice{
+position: relative;
+margin-left:70px;
+height:20px;
+}
+.roomSetDetel-roomcashPledgeRoomPrice{
+position: relative;
+margin-left:70px;
+height:20px;
+}
+.roomSetDetel-roomSet{
+position: relative;
+margin-top:10px;
+height: 170px;
+ width:500px;
+ overflow-y:auto;
+  overflow-x:hidden;
+}
+.roomSetDetel-roomSetroomEach{
+position: relative;
+margin-top:0px;
+ width:500px;
+}
+.roomSetDetel-roomSetroomType{
+ position:relative;
+ margin-left: 50px;
+ margin-top: 10px;
+ width:80px;
+ height:20px;
+ display: inline-block;
+}
+.roomSetDetel-roomSetroomPrice{
+ position:relative;
+ margin-left: 30px;
+ margin-top: 10px;
+ width:120px;
+ height:20px;
+  display: inline-block;
+}
+.roomSetDetel-roomSetcashPledge{
+ position:relative;
+ margin-left: 30px;
+ margin-top: 10px;
+ width:120px;
+ height:20px;
+  display: inline-block;
+}
+
+.roomSetDetel-goodsMain{
+ position: relative;
+margin-top:0px;
+ width:500px;
+ height:200px;
+
+}
+.roomSetDetel-Main-goodsType{
+position: relative;
+background: #DCDCDC;
+height:20px;
+text-align: center;
+}
+.roomSetDetel-Main-goodsOperate{
+position: relative;
+margin-top:0px;
+height:180px;
+ overflow-y: scroll;
+overflow-x: hidden;
+border-bottom: solid 1px #DCDCDC;
+
+}
+.roomSetDetel-Main-goodsOperateDetel{
+position: relative;
+margin-top:10px;
+height:20px;
+
+}
+.roomSetDetel-Main-goodsName{
+position: relative;
+margin-left:10px;
+margin-top:0px;
+height:20px;
+width:80px;
+}
+.roomSetDetel-Main-goodsNameText{
+position: relative;
+margin-left:10px;
+margin-top:0px;
+height:20px;
+width:120px;
+}
+.roomSetDetel-Main-goodsPrice{
+position: relative;
+margin-left:10px;
+margin-top:0px;
+height:20px;
+width:70px;
+}
+.roomSetDetel-Main-goodsPriceText{
+position: relative;
+margin-left:10px;
+margin-top:0px;
+height:20px;
+width:120px;
+}
+.roomSetDetel-Main-goodsAdd{
+position: relative;
+margin-top:10px;
+font-size:20px;
+height:20px;
+width:20px;
+cursor: pointer;
+}
+.roomSetDetel-Main-goodsSub{
+position: relative;
+margin-top:0px;
+font-size:20px;
+height:20px;
+width:20px;
+cursor: pointer;
+}
+.roomSetDetel-saveAndConcel{
+   position: relative;
+   margin-top:30px;
+   margin-left:300px;
+   height:20px;
+   width:170px;
+}
+.roomSetDetel-save{
+   position: relative;
+   margin-top:0px;
+   height:20px;
+   text-align:center;
+   width:70px;
+   background: #EEAD0E;
+   display:inline-block;
+   cursor: pointer;
+}
+.roomSetDetel-save:hover{
+	opacity: 0.5;
+}
+.roomSetDetel-concel{
+   position: relative;
+   margin-top:0px;
+   margin-left:10px;
+   height:20px;
+   text-align:center;
+   width:70px;
+   display:inline-block;
+   background: #EEAD0E;
+   cursor: pointer;
+}
+.roomSetDetel-concel:hover{
+	opacity: 0.5;
+}
+/* 房间设置部分结束 */
+/* 退房部分 */
+.CheckOutOperatePanel{
+	position: absolute;
+    top: -30px;
+    left: 00px;
+    width: 1340px;
+    height: 700px;
+    background:rgba(0,0,0,0.5);
+}
+.CheckOutOperate{
+    position: absolute;
+    left: 150px;
+    top: -10px;
+    width: 900px;
+    height: 710px;
+    background: #E8E8E8;
+    border-radius:5px;
+    border: solid 1px gray;
+}
+.CheckOutOperateTopTitle{
+   position: relative;
+    color:white;
+    text-align:center;
+    background: #4F4F4F;
+    height: 30px;
+}
+.CheckOutOperateTop-Table{
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 900px;
+    height: 150px;
+    background: white;
+    border: solid 1px #DCDCDC;
+}
+.CheckOutOperateTop-Table tbody{
+ height: 20px;
+}
+.CheckOutOperateTop-Table tr{
+    position: relative;
+    margin-top: 0px;
+    height: 20px;
+    border: solid 1px #DCDCDC;
+}
+.CheckOutOperateTop-Table tr td{
+    position: relative;
+    margin-top: 0px;
+    height: 20px;
+    width: 150px;
+    border: 1px solid;
+    text-align: left;
+    border: solid 1px #DCDCDC;
+}
+.CheckOutOperateMiddleTitle{
+    position: relative;
+    margin-top: 10px;
+    height: 20px;
+}
+.CheckOutOperateMiddleTitleLeft{
+        position: relative;
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 375px;
+    border-top: solid 1px black;
+}
+.CheckOutOperateMiddle{
+    position: relative;
+    height: 200px;
+}
+.CheckOutOperateMiddleTitleRight{
+      position: relative;
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 375px;
+     border-top: solid 1px black;
+}
+.CheckOutOperateMiddleTitleText{
+    position: relative;
+    float: left;
+    margin-left: 20px;
+    font-size: 15px;
+}
+.CheckOutOperateMiddleDetel{
+   position:relative;
+   background:#4F4F4F;
+   height:20px;
+}
+.CheckOutOperateMiddleDetel-roomType{
+  position: relative;
+  float:left;
+  width:150px;
+  height:20px;
+  border-right:solid 5px white;
+  text-align: center;
+  color:white;
+}
+.CheckOutOperateMiddleDetel-CheckBox{
+	position: relative;
+	float:left;
+	margin-left:11px;
+	border-right:solid 5px white;
+}
+.CheckOutOperateMiddleDetel-roomId{
+  position: relative;
+  float:left;
+  width:120px;
+  height:20px;
+  border-right:solid 5px white;
+  text-align: center;
+  color:white;
+}
+.CheckOutOperateMiddleDetel-roomPrice{
+    position: relative;
+   float:left;
+  width:150px;
+  height:20px;
+   border-right:solid 5px white;
+  text-align: center;
+  color:white;
+}
+.CheckOutOperateMiddleDetel-roomCashPledge{
+  position: relative;
+  float:left;
+  width:145px;
+  height:20px;
+   border-right:solid 5px white;
+  text-align: center;
+  color:white;
+}
+.CheckOutOperateMiddleDetel-roomBeizhu{
+  position: relative;
+  float:left;
+  width:250px;
+  height:20px;
+  text-align: center;
+  color:white;
+}
+.CheckOutOperateMiddleDetel-TableDiv{
+  position: relative;
+  height:180px;
+  background: white;
+  overflow-y:scroll; 
+   overflow-x:hidden; 
+}
+.CheckOutOperateMiddleDetel-Table{
+position: relative;
+}
+.CheckOutOperateMiddleDetel-Table tr{
+  position: relative;
+  height:20px;
+  padding-top: 5px;
+}
+.CheckOutOperateMiddleDetel-Table tr:nth-child(odd){
+  background: 	#E8E8E8
+}
+.CheckOutOperateMiddleDetel-TableCheckBoxDiv{
+  position:relative;
+  float:left;
+  margin-left:5px;
+  display:inline;
+
+}
+.CheckOutOperateMiddleDetelTableLine{
+	display: inline-block;
+	opacity: 0.3;
+}
+.CheckOutOperateMiddleDetel-roomType1{
+   position: relative;
+   float:left;
+   margin-left:0px;
+  width:125px;
+  height:20px;
+   border-right:5px;
+  text-align: center;
+}
+.CheckOutOperateMiddleDetel-roomId1{
+ position: relative;
+   float:left;
+  width:150px;
+  height:20px;
+   border-right:5px;
+  text-align: center;
+}
+.CheckOutOperateMiddleDetel-roomPrice1{
+ position: relative;
+   float:left;
+  width:150px;
+  height:20px;
+   border-right:5px;
+  text-align: center;
+}
+.CheckOutOperateMiddleDetel-roomCashPledge1{
+ position: relative;
+   float:left;
+  width:150px;
+  height:20px;
+   border-right:5px;
+  text-align: center;
+}
+.CheckOutOperateMiddleDetel-roomBeizhu1{
+ position: relative;
+ padding-left:20px;
+   float:left;
+ width:242px;
+  height:20px;
+   border-right:5px;
+  text-align:left;
+}
+.CheckOutOperateBottom{
+    position: relative;
+    height: 220px;
+  
+}
+
+.CheckOutOperateBottom-Consume{
+   position: relative;
+   float:left;
+   border-right:solid 1px;
+     background: white;
+     width:400px;
+    height: 200px;
+    overflow-y:scroll;
+    overflow-x: hidden;
+}
+.CheckOutOperateBottom-ConsumeTable-storeType{
+     position: relative;
+     float:left;
+     width:80px;
+     margin-left:10px;
+     padding-top:5px;
+     padding-bottom:5px;
+     height:20px;
+}
+.CheckOutOperateBottom-ConsumeTable-storePrice{
+     position: relative;
+     float:left;
+     width:40px;
+     margin-left:40px;
+     padding-top:5px;
+     padding-bottom:5px;
+     height:20px;
+}
+.CheckOutOperateBottom-ConsumeTable-storePriceText{
+     position: relative;
+     float:left;
+     margin-top:5px;
+     width:120px;
+     height:21px;
+}
+.CheckOutOperateBottom-ConsumeTable-storeTypeText{
+     position: relative;
+     float:left;
+     margin-top:5px;
+     width:50px;
+     height:21px;
+}
+.Onearrow1{
+	position:relative;
+	float:left;
+	margin-top:5px;
+	height:25px;
+	width:15px; 
+	border:solid 1px gray;
+	background: white;
+}
+
+.Onearrow1-up {  
+	position:relative;
+    width: 0;   
+    height: 0;   
+    border-left: 8px solid transparent;  
+    border-right: solid 8px  transparent;
+    border-bottom:8px solid;   
+    font-size: 0;  
+    line-height: 0;  
+    cursor: pointer;
+}
+.Onearrow1-up:hover {  
+   opacity: 0.5;
+}
+.Onearrow1-down{
+	position:relative;
+	top:5px;
+    width: 0;   
+    height: 0;   
+    border-left: 8px solid transparent;  
+    border-right:8px solid transparent;  
+    border-top: 8px solid black;  
+    font-size: 0;  
+    line-height: 0;  
+    cursor: pointer;
+}
+.Onearrow1-down:hover{
+   opacity: 0.5;
+}
+.CheckOutOperateBottom-Total{
+     position: relative;
+     float:left;
+     background: white;
+     width:495px;
+     height: 200px;
+     overflow-y:scroll;
+     overflow-x:hidden;
+}
+.CheckOutOperateBottom-roomreConsumePanel{
+   position: relative;
+   margin-top:10px;
+   display: inline-block;
+}
+.CheckOutOperateBottom-cashPledgPanel{
+     position: relative;
+     margin-top:10px;
+     width:500px;
+     display: inline-block;
+     
+}
+.CheckOutOperateBottomBottom{
+	position: absolute;
+	left:150px;
+	width:300px;
+	height:30px;
+}
+.CheckOutOperateBottom-cashPledge{
+    position: relative;
+    margin-left:50px;
+    color:gray;
+    float:left;
+}
+.CheckOutOperateBottom-cashPledgeNum{
+    position: relative;
+    float:left;
+}
+.CheckOutOperateBottom-roomreConsume{
+   position: relative;
+   float:left;
+   color:gray;
+   margin-left:50px;
+}
+.CheckOutOperateBottom-roomreConsumeRoomAndPrice{
+   position: relative;
+   float:left;
+}
+.CheckOutOperateBottom-roomreConsumeRoomNumText{
+   position: relative;
+   margin-left:60px;
+   float:left;
+   color:gray;
+}
+.CheckOutOperateBottom-roomreConsumeRoomNum{
+   position: relative;
+   float:left;
+   color:gray;
+}
+.CheckOutOperateBottom-roomreConsumeNumText{
+    position: relative;
+   margin-left:10px;
+   float:left;
+   color:gray;
+}
+.CheckOutOperateBottom-roomreConsumeNum{
+   position: relative;
+   float:left;
+}
+.CheckOutOperateBottom-StorePanel{
+   position: relative;
+   width:500px;
+   display:inline-block;
+   margin-top: 10px;
+}
+.CheckOutOperateBottom-ConsumeTitle{
+	position: relative;
+	wdith:380px;
+	height:20px;
+	background:#4F4F4F;
+	color:white;
+	text-align: center;
+}
+.CheckOutOperateBottom-Store{
+  position: relative;
+  color:gray;
+  margin-left:50px;
+  float:left;
+}
+.CheckOutOperateBottom-StoreNum{
+  position: relative;
+  float:left;
+}
+.CheckOutOperateBottom-TotalConsumePanel{
+   position: relative;
+   margin-top:10px;
+   display: inline-block;
+   width: 500px;
+  
+}
+.CheckOutOperateBottom-TotalConsumeText{
+   position: relative;
+   color:gray;
+   margin-left: 50px;
+   float:left;
+}
+.CheckOutOperateBottom-TotalConsumeNum{
+   position: relative;
+   float:left;
+}
+.CheckOutOperateBottom-BackConsumePanel{
+   position: relative;
+   margin-top: 10px;
+   width:500px;
+   display: inline-block;
+}
+.CheckOutOperateBottom-BackConsumeText{
+    position: relative;
+    padding-top:5px;
+    margin-left: 50px;
+   color:gray;
+   float:left;
+}
+.CheckOutOperateBottom-BackConsumeNum{
+   position: relative;
+   float:left;
+
+}
+.CheckOutOperateBottom-BackConsumeYuan{
+   position: relative;
+   margin-left: 10px;
+   float:left;
+    color:gray;
+}
+.CheckOutOperateBottom-BackConsumeYuan1{
+  position: relative;
+   padding-top:0px;
+   color:gray;
+   margin-left: 10px;
+   float:left;
+}
+.CheckOutOperateBottom-TotalMoney{
+   position: relative;
+   float:left;
+   font-size: 25px;
+   font-weight:bold;
+   color:red;
+}
+.CheckOutOperateBottom-BackConsumeYuan2{
+   position: relative;
+   padding-top:5px;
+   color:gray;
+   margin-left: 10px;
+   float:left;
+}
+.CheckOutBottomSubmitAndConcel{
+   position:relative;
+   height:30px;
+}
+.CheckOutBottomSubmit{
+    position: relative;
+    margin-top: 15px;
+    margin-left: 600px;
+    float: left;
+    height: 20px;
+    width: 100px;
+    background: #EEB422;
+    cursor: pointer;
+    text-align: center;
+}
+.CheckOutBottomSubmit:hover{
+   opacity: 0.5
+}
+.CheckOutBottomConcel{
+    position: relative;
+     margin-top: 15px;
+    margin-left: 20px;
+    float: left;
+    height: 20px;
+    width: 100px;
+    background: #EEB422;
+    cursor: pointer;
+     text-align: center;
+}
+.CheckOutBottomConcel:hover{
+   opacity: 0.5
+}
+/* 退房结束 */
+.pagination ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.pagination ul li {
+    padding: 0 10px;
+    vertical-align: top;
+    display: inline-block;
+    font-size: 14px;
+    min-width: 36px;
+    min-height: 28px;
+    line-height: 28px;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #ffffff;
+    color: #606266;
+    border-radius: 6px;
+    margin: 0 1px;
+    border: 1px solid #ebebeb;
+    height: 30px;
+}
+
+.pagination ul li:hover {
+    transform: scale(1.1);
+    background-color: #F4F6F8;
+}
+
+.pagination  li.active {
+    background: #98A6AD;
+    color: white;
+    cursor: not-allowed;
+}
+
+.pagination li.disabled {
+    cursor: not-allowed;
+}
+.pagination li.totalPage {
+    background: transparent;
+    cursor: default;
+    border: none;
+    padding: 0 6px;
+}
+
+.pagination li.totalPage:hover {
+    transform: none;
+    background-color: #ffffff;
+}
+
+
+.pagination li input {
+    -webkit-appearance: none;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    outline: none;
+    padding: 3px 5px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 40px;
+    height: 25px;
+    margin: 0 6px;
+}
+
+.pagination li input:focus{
+    border-color: #98A6AD;
+}
+.pagination{
+    user-select: none;
+}
+
+.pagination ul:nth-child(2){
+    border-radius: 6px;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.AddRoomTypeSmallLogolTop{
+	position: absolute;
+	top:5px;
+	left:20px;
+	width: 1350px;
+	height: 700px;
+	z-index:200;
+	background: rgba(5,5,5,0.5);
+}
+.AddRoomTypeSmallLogol{
+   position: absolute;
+   top:230px;
+   left:300px;
+   height:100px;
+   width:400px;
+   background:white;
+   border-radius: 5px;
+}
+.AddRoomTypeSmallLogolPanel{
+  position: relative;
+  height:50px;
+  margin-left: 75px;
+   margin-top:20px;
+}
+.AddRoomTypeSmallLogolText{
+   position: relative;
+   float:left;
+   margin-left: 20px;
+   
+}
+#roomDetelType{
+   position: relative;
+   float:left;
+   border:solid 1px  #D3D3D3;
+}
+.AddRoomTypeSmallLogolOkAndConcel{
+   position: relative;
+}
+.AddRoomTypeSmallLogolOk{
+    position: relative;
+    float:left;
+    margin-left:100px;
+    background: #CFCFCF;
+    height:25px;
+    width:100px;
+    cursor: pointer;
+    text-align: center;
+}
+.AddRoomTypeSmallLogolOk:hover {
+	background: #B5B5B5;
+}
+.AddRoomTypeSmallLogolConcel{
+    position: relative;
+    float:left;
+    margin-left:20px;
+    background: #CFCFCF;
+    height:25px;
+    width:100px;
+    cursor: pointer;
+    text-align: center;
+    
+}
+.AddRoomTypeSmallLogolConcel:hover {
+	background: #B5B5B5;
+}
+.ResertRoom-NullRoomType{
+    position: relative;
+    float: left;
+    margin-top: 40px;
+    margin-left: 10px;
+    height: 100px;
+    width: 150px;
+    background-color: #1874CD;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    color: white;
+    display: inline;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.ResertRoom-NullRoomType img{
+    height: 100px;
+    width: 150px;
+}
+.ResertRoom-OnPanel{
+   position: absolute;
+   display:inline-block;
+   top:200px;
+   left:200px;
+   width:1000px;
+   min-height:200px;
+   background: white;
+   border-radius: 5px;
+}
+.ResertRoom-OnPanelTop{
+	position: absolute;
+	top:5px;
+	left:20px;
+	width: 1350px;
+	height: 700px;
+	z-index:100;
+	background: rgba(5,5,5,0.5);
+	
+
+}
+.ResertRoom-OnPanelTitle{
+	margin-top: 5px;
+	text-align: center;
+}
+.ResertRoom-OnPanelRoomDelete{
+	position:absolute;
+	top:10px;
+	left:120px;
+	width:80px;
+	height:25px;
+	background: #FF6347;
+	text-align: center;
+	color:white;
+	cursor: pointer;
+	border-radius: 2px;
+}
+.ResertRoom-OnPanelRoomAdd{
+	position:absolute;
+	top:10px;
+	left:20px;
+	width:80px;
+	height:25px;
+	background: #FF0000;
+	text-align: center;
+	color:white;
+	cursor: pointer;
+	border-radius: 2px;
+}
+.ResertRoom-OnPanelRoomAdd{
+	opacity: 0.7;
+}
+.ResertRoom-OnPanelRoomDelete:hover{
+	opacity: 0.7;
+}
+.ResertRoom-OnPanelBack{
+	position:absolute;
+	top:10px;
+	left:900px;
+	width:80px;
+	height:25px;
+	background:#00BFFF;
+	text-align: center;
+	cursor: pointer;
+	color:white;
+	border-radius: 2px;
+}
+.ResertRoom-OnPanelBack:hover{
+	background: #1874CD;
+}
+.mainPanel {
+	position: relative;
+	folat: left;
+	top:5px;
+	left:20px;
+	width: 1350px;
+	height: 700px;
+	background-color: #F5F5F5;
+}
+.roomSet{
+	position: absolute;
+	top: 10px;
+	left:400px;
+	width: 100px;
+	height: 20px;
+	cursor:pointer;
+	background-color:#EEAD0E;
+	color:white;
+	text-align: center;
+	border-radius: 4px;
+}
+
+
+.roomReSet{
+	position: absolute;
+	top: 10px;
+	left:700px;
+	width: 100px;
+	height: 20px;
+	cursor:pointer;
+	background-color:#EEAD0E;
+	color:white;
+	text-align: center;
+	border-radius: 4px;
+
+}
+.roomBadSet{
+	position: absolute;
+	top: 10px;
+	left:550px;
+	width: 100px;
+	height: 20px;
+	cursor:pointer;
+	background-color:#EEAD0E;
+	color:white;
+	text-align: center;
+	border-radius: 4px;
+}
+.floorReSet{
+	position: absolute;
+	top: 10px;
+	left:870px;
+	width: 100px;
+	height: 20px;
+	cursor:pointer;
+	background-color:#EEAD0E;
+	color:white;
+	text-align: center;
+	border-radius: 4px;
+}
+.floorReSet:hover{
+  opacity: 0.5;
+}
+.roomBadSet:hover{
+  opacity: 0.5;
+}
+.roomReSet:hover{
+opacity: 0.5;
+}
+.roomSet:hover{
+	opacity: 0.5;
+}
+.ConcelFloorLogol{
+	position: absolute;
+    margin-left: 38px;
+    margin-top: -35px;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+.ConcelFloorLogol img{
+	width:15px;
+    height:15px;
+}
+.roomLeftPanelTop {
+	position: relative;
+	top: 5px;
+	left: 10px;
+	width: 1000px;
+	height: 30px;
+}
+
+.roomLeftPanelButtom {
+	position: relative;
+	margin-left: 10px;
+	width: 1300px;
+	height: 670px;
+	border: solid 1px;
+	border-color: #FFD700;
+	background-color: white;
+}
+
+.roomLeftPanelTopRoomState {
+	position: relative;
+	float: left;
+	height: 30px;
+	width: 100px;
+	background-color: #EEAD0E;
+	left: 10px;
+	cursor: pointer;
+	border-radius: 2px 2px 0 0;
+	text-align: center;
+}
+
+.roomLeftPanelTopReservations {
+	position: relative;
+	float: left;
+	margin-left: 20px;
+	height: 30px;
+	width: 100px;
+	text-align: center;
+	background-color: #EEDD82;
+	cursor: pointer;
+}
+
+.roomLeftPanelTopCheckIn {
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	height: 30px;
+	width: 100px;
+	text-align: center;
+	background-color: #EEDD82;
+	cursor: pointer;
+}
+.roomLeftPanelTopCheckOutCheck{
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	height: 30px;
+	width: 100px;
+	text-align: center;
+	background-color: #EEDD82;
+	cursor: pointer;
+}
+.roomLeftPanelTopCheckOut {
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	height: 30px;
+	width: 100px;
+	text-align: center;
+	background-color: #EEDD82;
+	cursor: pointer;
+}
+
+.roomLeftPanel {
+	position: relative;
+	overflow-y: scroll;
+	margin-left: 0px;
+	width: 1000px;
+	height: 670px;
+	background: white;
+	color: white;
+	font-family: "Microsoft YaHei";
+	font-size: 20px;
+}
+
+.roomLeftPanelLable {
+	position: relative;
+	margin-top: 5px;
+	height: 30px;
+	width: 50px;
+	background-color: #4F4F4F;
+	color: white;
+	font-family: "Microsoft YaHei";
+	font-size: 20px;
+	text-align: center;
+	display: block;
+}
+
+.roomleftPanelImage1 {
+	position: relative;
+	display: inline-block;
+}
+
+.roomleftPanelImage {
+	position: relative;
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+	height: 100px;
+	width: 150px;
+	background-color: #1874CD;
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	color: white;
+	display: inline;
+}
+.roomResetLogol {
+	position: relative;
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+	cursor:pointer;
+	display: inline;
+}
+.roomResetLogol img{
+	height: 100px;
+	width: 150px;
+}
+.roomleftPanelImageLable {
+	position: absolute;
+	margin-left: 5px;
+	margin-top: 1px;
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	color: white;
+}
+
+.roomleftPanelImageStyle {
+	position: absolute;
+	margin-left: 40px;
+	margin-top: 1px;
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	color: white;
+}
+
+.roomleftPanelImageName {
+	position: absolute;
+	display:block;
+	width:150px;
+	margin-top: 20px;
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	color: white;
+	text-align: center;
+}
+
+.roomleftPanelImageImg {
+	position: absolute;
+	margin-left: 58px;
+	margin-top: 40px;
+	width: 33px;
+	height: 30px;
+}
+
+.roomleftPanelImageImg img {
+	width: 35px;
+	height: 38px;
+}
+
+.roomleftPanelImageVip {
+	position: absolute;
+	margin-left: 120px;
+	margin-top: 40px;
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	color: white;
+}
+
+.roomleftPanelImageRoomState {
+	position: absolute;
+	margin-left: 5px;
+	margin-top: 75px;
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	color: white;
+}
+
+.roomleftPanelImageRoomBad1{
+	position: absolute;
+	margin-left:60px;
+	margin-top:40px;
+   height:15px;
+   width:15px;
+   cursor: pointer;
+}
+.roomleftPanelImageRoomDelete1{
+	position: absolute;
+	margin-left:130px;
+	margin-top:5px;
+   height:15px;
+   width:15px;
+   cursor: pointer;
+}
+.roomleftPanelImageRoomBad1 img{
+   height:30px;
+   width:30px;
+}
+.roomleftPanelImageRoomDelete1 img{
+   height:15px;
+   width:15px;
+}
+.roomRightPanel {
+	position: absolute;
+	top: 10px;
+	margin-left: 1040px;
+	width: 250px;
+	height: 650px;
+	border: solid 1px;
+	border-color: #FFA500;
+	border-radius: 5px;
+	background-color: white;
+}
+
+.roomRightPanelLable {
+	position: relative;
+	height: 30px;
+	font-size: 18px;
+	color: white;
+	background-color: #FFA500;
+	font-family: "Microsoft YaHei";
+	
+}
+
+.roomRightPanelIndex {
+	position: relative;
+	height: 100px;
+	border-bottom: solid 1px;
+	border-color: #FFA500;
+
+}
+
+.roomRightPanelIndexDemoText {
+	position: relative;
+	float: left;
+	top: 30px;
+	left: 30px;
+	width: 150px;
+	height: 25px;
+	border-color:#838B8B;
+	border:2px solid #838B8B;
+	border-radius: 5px 0px 0px 5px;
+}
+.roomRightPanelIndexDemopage {
+	position: relative;
+	left: 30px;
+	top: 30px;
+	float: left;
+	height: 27px;
+	width: 35px;
+	border: solid 2px;
+	border-left-style:none;
+	border-color: #838B8B;
+	border-radius: 0px 5px 5px 0px;
+	background-color: #FFFAFA;
+	cursor: pointer;
+}
+
+.roomRightPanelIndexDemopage img {
+   margin-left:8px;
+   margin-top:5px;
+	height: 20px;
+	width: 20px;
+}
+.roomRightPanelIndexDemopagesearch {
+	box-sizing: border-box;
+	position: relative;
+	height: 25px;
+	width: 25px;
+	top: 25px;
+	left: 15px;
+	width: 1em;
+	height: .3em;
+	background-color: #000;
+	border-top-right-radius: .15em;
+	border-bottom-right-radius: .15em;
+	transform: rotate(40deg);
+	transform-origin: right center;
+}
+
+.roomRightPanelIndexDemopagesearch:before {
+	content: "";
+	position: absolute;
+	height: 25px;
+	width: 25px;
+	left: -1.3em;
+	bottom: -.6em;
+	width: 1em;
+	height: 1em;
+	border: .3em solid #000;
+	border-radius: 50%;
+}
+.roomRightPanelState {
+	position: relative;
+	height: 120px;
+	border-bottom: solid 1px;
+	border-color: #FFA500;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.roomRightPanelS {
+	position: relative;
+	width: 200px;
+	height: 20px;
+	top: 10px;
+	left: 20px;
+	color: #FF8C00;
+	font-size: 15px;
+	border-bottom: solid 1px;
+	border-color: black;
+}
+
+.roomRightPanelStateCheckBox {
+	position: relative;
+	top: 20px;
+	left: 20px;
+}
+
+.roomRightPanelType {
+	position: relative;
+	height: 200px;
+	border-bottom: solid 1px;
+	border-color: #FFA500;
+	overflow-y:auto;
+	overflow-x:hidden; 
+}
+
+.roomRightPanelT {
+	position: relative;
+	width: 200px;
+	height: 20px;
+	top: 10px;
+	left: 20px;
+	color: #FF8C00;
+	font-size: 15px;
+	border-bottom: solid 1px;
+	border-color: black;
+}
+
+.roomRightPanelStateCheckBox {
+	position: relative;
+	top: 20px;
+	left: 20px;
+}
+
+.roomRightPanelFloor {
+	position: relative;
+	height: 200px;
+	border-bottom: solid 1px;
+	border-color: #FFA500;
+	overflow-y:auto; 
+	overflow-x:hidden; 
+}
+
+.roomRightPanelF {
+	position: relative;
+	width: 200px;
+	height: 20px;
+	top: 10px;
+	left: 20px;
+	color: #FF8C00;
+	font-size: 15px;
+	border-bottom: solid 1px;
+	border-color: black;
+}
+
+.roomRightPanelStateCheckBox1 {
+	position: relative;
+	top: 20px;
+	left: 20px;
+	font-size: 14px;
+		display: inline-block;
+	
+}
+.colorRoomState1{
+	position: absolute;
+	top:0px;
+	left:50px;
+	display: inline-block;
+	height:15px;
+	width:15px;
+	background: rgb(0, 205, 0);
+}
+.roomRightPanelStateCheckBox2 {
+	position: relative;
+	top: 20px;
+	left: 20px;
+	font-size: 14px;
+}
+.colorRoomState2{
+	position: absolute;
+	left:50px;
+	top:20px;
+	display: inline-block;
+	height:15px;
+	width:15px;
+	background: #1874CD;
+}
+.colorRoomState3{
+	position: absolute;
+	left:50px;
+	display: inline-block;
+	height:15px;
+	width:15px;
+	background: rgb(123, 104, 238)
+}
+.colorRoomState4{
+	position: absolute;
+	left:50px;
+	display: inline-block;
+	height:15px;
+	width:15px;
+	background:red;
+}
+.roomRightPanelStateCheckBox3 {
+	position: relative;
+	top: 20px;
+	left: 20px;
+	font-size: 14px;
+}
+
+
+
+.submit {
+	position: relative;
+	float: left;
+	left: 30px;
+	top: 20px;
+	height: 0;
+	width: 0;
+}
+/* 预订部分 */
+.roomReservationsMainMianPanel{
+	position:absolute;
+	display: block;
+	z-index:0;
+}
+.roomReservationsTopPanel {
+	position: relative;
+	left: 10px;
+	margin-top: 10px;
+	width: 1300px;
+	height: 20px;
+}
+
+.roomReservationsTopPanelDate {
+	position: relative;
+	background-color: white;
+	height: 20px;
+	width: 1500px;
+}
+
+.roomReservationsTopPanelDateTime {
+	position: relative;
+	float: left;
+	width: 80px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.roomReservationsTopPanelDateTimeYesterday {
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	width: 50px;
+	cursor: pointer;
+	text-align: center;
+	font-size: 15px;
+	background-color: #EEB422;
+	
+}
+
+.roomReservationsTopPanelDateTimeToday {
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	width: 50px;
+	text-align: center;
+	font-size: 15px;
+	background-color: #CDC5BF;
+	cursor: pointer;
+	
+}
+
+.roomReservationsTopPanelDateTimeToday {
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	width: 50px;
+	cursor: pointer;
+	text-align: center;
+	font-size: 15px;
+	background-color: #CDC5BF;
+	
+}
+
+.roomReservationsTopPanelDateTimeTomorrow {
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	width: 50px;
+	cursor:move;
+	cursor: pointer;
+	text-align: center;
+	font-size: 15px;
+	background-color: #CDC5BF;
+	
+}
+
+.roomReservationsTopPanelDateTimeDayaftertomorrow {
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	width: 50px;
+	cursor: pointer;
+	text-align: center;
+	font-size: 15px;
+	background-color: #CDC5BF;
+}
+
+.roomReservationsTopPanelDateTimePersonal {
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	width: 50px;
+	text-align: center;
+	font-size: 15px;
+	background-color: #CDC5BF;
+	cursor: pointer;
+}
+/* 日历部分 */
+
+.roomReservationsTopPanelDateTimePersonalDateText{
+	position:relative;
+	float:left;
+	margin-left: 10px;
+	width: 300px;
+	display:none;
+}
+.roomReservationsTopPanelDateTimePersonalDateTextArriveTime{
+	position:relative;
+	float:left;
+	margin-left: 10px;
+	width: 120px;
+}
+.roomReservationsTopPanelDateTimePersonalDateTextBetween{
+	position:relative;
+	float:left;
+	margin-left: 10px;
+	width: 20px;
+}
+.roomReservationsTopPanelDateTimePersonalDateTextReserveTime{
+    position:relative;
+	float:left;
+	margin-left: 10px;
+	width: 120px;
+}
+
+.roomReservationsTopPanelDetel {
+	position: relative;
+	margin-top: 20px;
+	height: 25px;
+	width: 1200px;
+}
+
+.roomReservationsTopPanelDetelAdd{
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	width: 60px;
+	text-align: center;
+	font-size: 16px;
+	background-color: #EEB422;
+	cursor: pointer;
+}
+.roomReservationsTopPanelDetelAdd:hover{
+	opacity: 0.5;
+}
+.roomReservationsTopPanelDetelMoreDetel{
+	position:relative;
+	float: left;
+	height:20px;
+	width:1000px;
+}
+
+.roomReservationsTopPanelDetelMore {
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	width: 60px;
+	text-align: center;
+	font-size: 16px;
+	background-color: #EEB422;
+	cursor: pointer;
+}
+.roomReservationsTopPanelDetelMore:hover{
+	opacity: 0.5;
+}
+.DetelMoreorderName1{
+	position: relative;
+	float: left;
+	height:20px;
+	margin-left: 10px;
+	width: 40px;
+	font-size: 16px;
+}
+#DetelMoreorderName{
+	position: relative;
+	float: left;
+	height:15px;
+	margin-left: 0px;
+	width: 100px;
+	font-size: 16px;
+	
+}
+.DetelMorephoneNum1{
+	position: relative;
+	float: left;
+	height:20px;
+	margin-left: 10px;
+	width: 60px;
+	font-size: 16px;
+}
+#DetelMorephoneNum{
+	position: relative;
+	float: left;
+	height:15px;
+	margin-left: 0px;
+	width: 100px;
+	font-size: 16px;
+}
+.DetelMoreorderNum1{
+	position: relative;
+	float: left;
+	height:20px;
+	margin-left: 10px;
+	width: 70px;
+	font-size: 16px;
+}
+#DetelMoreorderNum{
+	position: relative;
+	float: left;
+	height:15px;
+	margin-left: 5px;
+	width: 100px;
+	font-size: 16px;
+}
+.indexDetelMoreorde{
+	position: relative;
+	float: left;
+	height:20px;
+	margin-left: 5px;
+    width: 100px;
+    font-size: 16px;
+    background: #EEB422;
+    text-align: center;
+    cursor: pointer;
+}
+.indexDetelMoreorde:hover{
+	opacity: 0.5;
+}
+.roomReservationsButtomPanel {
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 1250px;
+	height: 550px;
+	border: solid 1px;
+	border-color: #EEEEE0;
+}
+
+.roomReservationsButtomPanelTitle {
+	position: relative;
+	left: 0px;
+	height: 25px;
+}
+
+.roomReservationsButtomPanelTitle ul {
+	position: absolute;
+	
+	padding: 0px;
+	list-style: none;
+	height: 25px;
+	display: block;
+}
+.roomReservationsButtomPanelTitleUl{
+	position: relative;
+	margin-top:0px;
+	margin-left:0px;
+}
+li {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.roomReservationsButtomPanelTitleList {
+	position: relative;
+	float: left;
+	width: 40px;
+	background-color: #4F4F4F;
+	color: white;
+	text-align: center;
+}
+
+.roomReservationsButtomPanelTitleName {
+	position: relative;
+	float: left;
+	margin-left: 5px;
+	width: 100px;
+	background-color: #4F4F4F;
+	color: white;
+	text-align: center;
+}
+
+.roomReservationsButtomPanelTitlePhoneNum {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 130px;
+	background-color: #4F4F4F;
+	color: white;
+	text-align: center;
+}
+
+.roomReservationsButtomPanelTitleReserveTime {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 140px;
+	background-color: #4F4F4F;
+	color: white;
+	text-align: center;
+}
+.roomReservationsButtomPanelTitleArriveTime {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 140px;
+	background-color: #4F4F4F;
+	color: white;
+	text-align: center;
+}
+
+.roomReservationsButtomPanelTitleDayTimes {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 50px;
+	background-color: #4F4F4F;
+	color: white;
+	text-align: center;
+}
+
+.roomReservationsButtomPanelTitleRoomNum {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 100px;
+	background-color: #4F4F4F;
+	color: white;
+	text-align: center;
+}
+
+.roomReservationsButtomPanelTitleCashpledge {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 80px;
+	background-color: #4F4F4F;
+	color: white;
+	text-align: center;
+}
+
+.roomReservationsButtomPanelTitleState {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 100px;
+	background-color: #4F4F4F;
+	color: white;
+	text-align: center;
+}
+
+.roomReservationsButtomPanelTitleResrveId {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 120px;
+	background-color: #4F4F4F;
+	color: white;
+	text-align: center;
+}
+
+.roomReservationsButtomPanelTitleOperate {
+	position: relative;
+	float: left;
+	margin-left: 5px;
+	width: 199px;
+	background-color: #4F4F4F;
+	color: white;
+	text-align: center;
+}
+.roomReservationsButtomPanelDetel{
+	position: relative;
+	display: block;
+	height:531.6px;
+}
+#data-table tr:nth-child(odd) {
+	background: #E8E8E8;
+}
+#data-table{
+	position:relative;
+	left:0px;
+	top:0px;
+}
+.roomReservationsButtomPanelTitleUl1 {
+	position: relative;
+	display:block;
+	padding: 0px;
+	margin: 0px;
+	top: 0px;
+	left: 0px;
+	height: 25px;
+	font-size: 16px;
+	padding-top: 3px;
+}
+
+.roomReservationsButtomPanelTitleList1 {
+	position: relative;
+	float: left;
+	width: 40px;
+	text-align: center;
+	
+}
+
+.roomReservationsButtomPanelTitleName1 {
+	position: relative;
+	float: left;
+	margin-left: 5px;
+	width: 100px;
+	text-align: center;
+}
+
+.roomReservationsButtomPanelTitlePhoneNum1 {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 130px;
+	text-align: center;
+}
+
+.roomReservationsButtomPanelTitleReserveTime1 {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 140px;
+	text-align: center;
+	height: 25px;
+	overflow:hidden;
+}
+.roomReservationsButtomPanelTitleArriveTime1 {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 140px;
+	text-align: center;
+	height: 25px;
+	overflow:hidden;
+}
+.roomReservationsButtomPanelTitleDayTimes1 {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 50px;
+	text-align: center;
+}
+
+.roomReservationsButtomPanelTitleRoomNum1 {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 100px;
+	text-align: center;
+}
+
+.roomReservationsButtomPanelTitleCashpledge1 {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 80px;
+	text-align: center;
+}
+
+.roomReservationsButtomPanelTitleState1 {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 100px;
+	text-align: center;
+}
+
+.roomReservationsButtomPanelTitleResrveId1 {
+	position: relative;
+	margin-left: 5px;
+	float: left;
+	width: 120px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.roomReservationsButtomPanelTitleOperate1 {
+	position: relative;
+	float: left;
+	margin-left: 5px;
+	width: 196px;
+	text-align: center;
+	cursor: pointer;
+}
+.roomReservationsButtomPanelTitleOperate1CheckIn1{
+	position: relative;
+	float: left;
+	margin-left: 50px;
+	width: 100px;
+	background:red;
+	text-align: center;
+	cursor: pointer;
+	color:white;
+}
+.roomReservationsButtomPanelTitleOperate1CheckIn2{
+	position: relative;
+	float: left;
+	margin-left: 50px;
+	width: 100px;
+	background:#EEB422;
+	text-align: center;
+	cursor: pointer;
+}
+.roomReservationsButtomPanelTitleCheckoutCheck{
+		position: relative;
+	float: left;
+	margin-left: 20px;
+	width: 70px;
+	background:#EEB422;
+	text-align: center;
+	cursor: pointer;
+}
+.roomReservationsButtomPanelTitleOverTimeCheckoutCheck{
+	position: relative;
+	float: left;
+	margin-left: 20px;
+	width: 70px;
+	background:red;
+	color:white;
+	text-align: center;
+	cursor: pointer;
+}
+.roomReservationsButtomPanelTitleCheckoutBack{
+    position: relative;
+    float: left;
+    margin-left: 50px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+.roomReservationsButtomPanelTitleCheckoutDelete{
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	width: 70px;
+	background:#EEB422;
+	text-align: center;
+	cursor: pointer;
+}
+.roomReservationsButtomPanelTitleCheckoutDelete:hover{
+	opacity: 0.5;
+}
+.roomReservationsButtomPanelTitleCheckoutCheck:hover{
+	opacity: 0.5;
+}
+.roomReservationsButtomPanelTitleOverTimeCheckoutCheck:hover{
+	opacity: 0.5;
+}
+.roomReservationsButtomPanelTitleOperate1CheckIn1:hover{
+	opacity: 0.5;
+}
+.roomReservationsButtomPanelTitleOperate1CheckIn2:hover{
+	opacity: 0.5;
+}
+.roomReservationsButtomPanelTitleOperate1Check{
+	position: relative;
+	float: left;
+	margin-left: 5px;
+	width: 50px;
+	background:#EEB422;
+	text-align: center;
+	cursor: pointer;
+}
+.roomReservationsButtomPanelTitleOperate1Check:hover{
+	opacity: 0.5;
+}
+.roomReservationsButtomPanelTitleOperate1Modify{
+	position: relative;
+	float: left;
+	margin-left: 5px;
+	width: 50px;
+	background:#EEB422;
+	text-align: center;
+}
+.roomReservationsButtomPanelTitleOperate1Modify:hover{
+	opacity: 0.5;
+}
+.roomReservationsButtomPanelTitleOperate1Detete{
+    position: relative;
+	float: left;
+	margin-left: 5px;
+	width: 50px;
+	background:#EEB422;
+	text-align: center;
+}
+.roomReservationsButtomPanelTitleOperate1Detete:hover{
+	opacity: 0.5;
+}
+/* 翻页部分 */
+.roomLeftPanelPageChange{
+position: absolute;
+margin-top:0px;
+margin-left: 400px;
+width: 1000px;
+height: 20px;
+}
+.roomLeftPanelPageChangeAllRow1{
+position: relative;
+float:left;
+
+}
+.roomLeftPanelPageChangeAllRow2{
+ position: relative;
+ float:left;
+ margin-left: 10px;
+
+  
+}
+.roomLeftPanelPageChangeAllRow3{
+ position: relative;
+ float:left;
+ margin-left: 10px;
+
+  
+}
+.roomLeftPanelPageChangeEveryPage1{
+  position: relative;
+ float:left;
+ margin-left: 5px;
+}
+.roomLeftPanelPageChangeEveryPage2{
+  position: relative;
+ float:left;
+ margin-left: 10px;
+}
+.roomLeftPanelPageChangeEveryPage3{
+  position: relative;
+ float:left;
+ margin-left: 10px;
+}
+.roomLeftPanelPageChangeWitchPage1{
+ position: relative;
+ float:left;
+ margin-left: 5px;
+
+}
+.roomLeftPanelPageChangeWitchPage2{
+  position: relative;
+ float:left;
+ margin-left: 10px;
+}
+.roomLeftPanelPageChangeWitchPage3{
+  position: relative;
+ float:left;
+ margin-left: 10px;
+}
+.roomLeftPanelPageChangeWitchPage4{
+ position: relative;
+ float:left;
+ margin-left: 10px;
+}
+.roomLeftPanelPageChangeWitchPage5{
+ position: relative;
+ float:left;
+ margin-left: 10px;
+}
+.roomLeftPanelPageChangeFirstPage{
+  position: relative;
+ float:left;
+ margin-left: 10px;
+ cursor: pointer;
+ color:blue;
+}
+.roomLeftPanelPageChangeLastPage{
+ position: relative;
+ float:left;
+ margin-left: 10px;
+  cursor: pointer;
+  color:blue;
+}
+.roomLeftPanelPageChangeNextPage{
+ position: relative;
+ float:left;
+ margin-left: 10px;
+ cursor: pointer;
+ color:blue;
+}
+.roomLeftPanelPageChangeEndPage{
+  position: relative;
+ float:left;
+ margin-left: 10px;
+  cursor: pointer;
+ color:blue;
+}
+.roomLeftPanelPageChangeText{
+ position: relative;
+ float:left;
+ width:30px;
+ margin-left: 10px;
+}
+.roomLeftPanelPageChangeTo{
+ position: relative;
+ float:left;
+ margin-left: 1px;
+  cursor: pointer;
+ color:blue;
+}
+/* 翻页部分结束 */
+.DetelAdddetel{
+	position:absolute;
+}
+.roomReservationsTopPanelDateTimePersonalPanel{
+	position:relative;
+	float:left;
+}
+.changByMyselfMain{
+	position:relative;
+	float:left;
+	margin-left: 20px;
+	height:30px;
+	width:500px;
+}
+.changByMyselfMainLeft{
+	position: relative;
+	float:left;
+	width:150px;
+	heigth:20px;
+}
+.changByMyselfMainLeftMiddle{
+	position: relative;
+	float:left;
+	margin-left:10px;
+	width:30px;
+	heigth:20px;
+}
+.changByMyselfMainRight{
+	position: relative;
+	float:left;
+	margin-left:10px;
+	width:150px;
+	heigth:20px;
+}

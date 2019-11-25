@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.StoreMapper">
+<select id="getStoreInformation" resultType="com.po.Store">
+select * from roomgoods
+</select>
+<select id="getroomPriceInformation" resultType="com.po.RoomPrice">
+select * from roomoperate
+</select>
+<delete id="deleteStore">
+delete from roomgoods
+</delete>
+<delete id="deleteRoomPrice">
+delete from roomoperate
+</delete>
+<insert id="setRoomStore" parameterType="com.po.Store">
+insert into roomgoods (goodsName,goodsPrice) values(#{goodsName},#{goodsPrice})
+</insert>
+<insert id="setRoomPrice" parameterType="com.po.RoomPrice">
+insert into roomoperate (roomType,roomPrice,roomCashPledge) values(#{roomType},#{roomPrice},#{roomCashPledge})
+</insert>
+</mapper>

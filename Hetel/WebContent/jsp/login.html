@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<script src="../JS/jquery.form.js"></script>
+<style text="text/css">
+html,body,.login{
+padding:0;
+margin:0;
+width:100%;
+height:100%;
+position: relative;
+user-select:none;
+}
+.login-top{
+position:absolute;
+top:20px;
+left:50%;
+padding:0;
+margin:0;
+width:650px;
+height:220px;
+transform:translateX(-50%);
+user-select:none;
+
+}
+.login-topic{
+	padding:0;
+	margin:0;
+	width:100%;
+	height:100%;
+}
+.login-panel1{
+position: absolute;
+top: 290px;
+left: 50%;
+width: 450px;
+height: 350px;
+background-color: rgba(255,255,255,0.75);
+border-radius: 10px;
+transform:translateX(-50%);
+}
+.login-panel2{
+position: absolute;
+top: 290px;
+left:550px;
+width: 450px;
+height: 400px;
+background-color: rgba(255,255,255,0.75);
+border-radius: 5px;
+display: none;
+}
+.login-panelTitle{
+position:absolute;
+top:10px;
+left:50%;
+margin-top:10px;
+text-align:center;
+font-size: 17.5px;
+font-weight: bold;
+font-style: normal;
+letter-spacing:3px;
+transform:translateX(-50%);
+color:rgba(53,53,53,0.875);
+}
+.login-panelMain{
+position: absolute;
+top:70px;
+}
+.loginUserSet{
+position: relative;
+margin-top:30px;
+height:30px;
+}
+.login-panelMainUser{
+position: relative;
+margin-left: 100px;
+height:25px;
+font-size: 15px;
+color: #6a6f77;
+}
+#loginUser{
+position: relative;
+margin-left:20px;
+padding: 0px 10px 0px 10px;
+height: 35px;
+width: 200px;
+border-radius: 3px;
+border: 1px solid #c8cccf;
+font-size:13px;
+color: #6a6f77;
+outline: 0;
+}
+#loginUser::-webkit-input-placeholder {
+                color: rgba(51,51,51,0.45);
+            }
+#loginUser::-moz-placeholder {
+                color: rgba(51,51,51,0.45);
+            }
+.loginUserPassWordSet{
+position: relative;
+margin-top:10px;
+height:30px;
+}
+.login-panelMainPass{
+position: relative;
+margin-left: 100px;
+height:25px;
+font-size: 15px;
+color: #6a6f77;
+}
+#loginPass{
+position: relative;
+margin-left: 20px;
+padding: 0px 10px 0px 10px;
+height: 35px;
+width: 200px;
+border-radius: 3px;
+border: 1px solid #c8cccf;
+font-size:13px;
+color: #6a6f77;
+outline: 0;
+}
+#loginPass::-webkit-input-placeholder {
+                color: rgba(51,51,51,0.45);
+            }
+#loginPass::-moz-placeholder {
+                color: rgba(51,51,51,0.45);
+            }
+.loginSubmit{
+margin: 0;
+padding: 0;
+border: 1px solid;  
+outline: none;    
+position: relative;
+margin-top: 15px;
+margin-left: 135px;
+height: 35px;
+background: #357eb8;
+color: #bcedff;
+font-weight: bold;
+font-size: 16px;
+width:230px;
+border-radius: 3px;
+}
+.loginSubmit:hover {
+	background: #00BFFF;
+	cursor: pointer;
+}
+.loginpassWordAndLoginOn{
+  position: relative;
+
+  margin-top: 10px;
+}
+.loginpassWordOp{
+  position: relative;
+    float:left;
+  height:30px;
+  margin-left:150px;
+}
+.loginOnOp{
+  position: relative;
+  margin-left:40px;
+  float:left;
+  color:blue;
+  cursor: pointer;
+}
+.containerTitle{
+     position:absolute;
+     font-family:STKaiti;
+     top:100px;
+     left:400px;
+     font-size: 50px;
+}
+.login-panelMainUser-Tip{
+  position: relative;
+  margin-top:10px;
+  margin-left:140px;
+  height:20px;
+  color: #ff5b5b;
+  font-size: 12px;
+}
+.login-panelMainPass-Tip{
+  position: relative;
+  margin-top:10px;
+  margin-left:140px;
+   height:20px;
+  color: #ff5b5b;
+  font-size: 12px;
+}
+.containerImg{
+position: relative;
+height:100%;
+ width:500px;
+
+}
+.containerImg img{
+height:100%;
+ width:500px;
+}
+#loginPass1{
+position: relative;
+margin-left: 50px;
+height: 35px;
+width: 240px;
+border-radius: 3px;
+border: 1px solid #c8cccf;
+color: #6a6f77;
+outline: 0;
+}
+#loginPass2{
+position: relative;
+margin-left: 18px;
+height: 35px;
+width: 240px;
+border-radius: 3px;
+border: 1px solid #c8cccf;
+color: #6a6f77;
+outline: 0;
+}
+#loginUser1{
+position: relative;
+margin-left: 50px;
+height: 35px;
+width: 240px;
+border-radius: 3px;
+border: 1px solid #c8cccf;
+color: #6a6f77;
+outline: 0;
+}
+.loginBack{
+position: relative;
+margin-left:350px;
+margin-top:10px;
+cursor: pointer;
+color:blue;
+}
+.regesterSubmit{
+position: relative;
+margin: 0;
+padding: 0;
+border: 1px solid;  
+outline: none;    
+position: relative;
+margin-top: 15px;
+margin-left: 170px;
+height: 35px;
+background: #357eb8;
+color: #bcedff;
+font-weight: bold;
+font-size: 16px;
+width:230px;
+border-radius: 3px;
+}
+
+.regesterSubmit:hover{
+ background: blue;
+}
+.regester-panelMainUser-Tip{
+  position: relative;
+  display:inline-block;
+  margin-top:10px;
+  margin-left:170px;
+ min-height:20px;
+  color: #ff5b5b;
+  font-size: 12px;
+}
+.regester-panelMainPass1-Tip{
+  position: relative;
+   display:inline-block;
+  margin-top:10px;
+  margin-left:170px;
+  min-height:20px;
+  color: #ff5b5b;
+  font-size: 12px;
+}
+.regester-panelMainPass2-Tip{
+  position: relative;
+   display:inline-block;
+  margin-top:10px;
+  margin-left:170px;
+  min-height:20px;
+  color: #ff5b5b;
+  font-size: 12px;
+}
+</style>
+<body>
+<div class="login"><img class="login-top" src="../img/login_top_1.png">
+<img class="login-topic" src="../img/login_topic_1.jpg">
+</div>
+   <div class="login-panel1">
+   
+      <div class="login-panelTitle">
+          用户登录
+      </div>
+      <form action="../user/findUserById" id="login-panelMain"  class="login-panelMain" method="post" onsubmit="return saveSubmits()">
+         <div class="loginUserSet"><span class="login-panelMainUser">账号</span><input id="loginUser" name="username" type="text" placeholder="请输入账号" autocomplete="off"></div>
+         <div class="login-panelMainUser-Tip"></div>
+         <div class="loginUserPassWordSet"><span class="login-panelMainPass">密码</span><input id="loginPass" name="password" type="password" placeholder="请输入密码" autocomplete="off"></div>
+        <div class="login-panelMainPass-Tip"></div>
+         <input type="submit" class="loginSubmit" value="登录">
+         <div class="loginpassWordAndLoginOn">
+         <div class="loginpassWordOp"><span><input type="checkbox" class="RemeberPass1" onclick="remeberPassWord()" value="" name=""></span><span class="loginpassWordRem">记住密码</span></div>
+         <div class="loginOnOp" onclick="regester()">立即注册</div>
+                  </div>
+      </form>
+   </div>
+
+<div class="login-panel2">
+<div class="login-panelTitle">
+   用户注册
+</div>
+<form action="../user/findUserByGetId" method="post" id="regester-panelMain" onsubmit="return registerSubmits()">
+         <div class="loginUserSet"><span class="login-panelMainUser">账号</span><input id="loginUser1" name="username" type="text" placeholder="请输入账号" autocomplete="off"></div>
+         <div class="regester-panelMainUser-Tip"></div>
+         <div class="loginUserPassWordSet"><span class="login-panelMainPass">密码</span><input id="loginPass1" name="password1" type="password" placeholder="请输入密码" autocomplete="off"></div>
+        <div class="regester-panelMainPass1-Tip"></div>
+         <div class="loginUserPassWordSet"><span class="login-panelMainPass">确认密码</span><input id="loginPass2" name="password2" type="password" placeholder="请输入密码" autocomplete="off"></div>
+        <div class="regester-panelMainPass2-Tip"></div>
+        <input type="submit" class="regesterSubmit" value="注册">
+</form>
+  <div class="loginBack" onclick="loginback()">返回</div>
+</div>
+</div>
+</body>
+<script>
+function registerSubmits(){
+	var text=/^[a-zA-Z]\w{5,17}$/;
+	var user=$("#loginUser1").val()+"";
+	var pass1=$("#loginPass1").val()+"";
+	var pass2=$("#loginPass2").val()+"";
+	if(user!=""&&pass1!=""&&pass2!=""){
+			if(pass1.match(text)){
+		if(pass1!=pass2){
+			$(".regester-panelMainPass2-Tip").html("前后密码不一致")
+		}
+		else{
+	$("#regester-panelMain").ajaxSubmit(function(data){
+
+	 if(data!=""&&data!=null){
+		   
+			alert("注册成功")
+			$(".login-panel2").css({"display":"none"})
+			$(".login-panel1").css({"display":"block"})
+			$("#loginUser").val(data.username);
+	 } 
+	 else{
+		 alert("注册失败，用户名已存在")
+	 }
+
+});  
+	}
+	}
+			else{
+		$(".regester-panelMainPass1-Tip").html("以字母开头<br>长度在6~18之间<br>只能包含字母、数字和下划线")
+			}
+				}
+	else{
+		alert("请输入完整数据")
+	}
+return false;
+}
+function loginback(){
+	 $(".login-panel2").css({"display":"none"})
+	 $(".login-panel1").css({"display":"block"})
+}
+ function regester(){
+	 $(".login-panel2").css({"display":"block"})
+	 $(".login-panel1").css({"display":"none"})
+ }
+ function saveSubmits(){
+	$("#login-panelMain").ajaxSubmit(function(data){
+  			if(data!=""){
+		if($(".RemeberPass1").attr("checked")=="checked"){
+				setCookie(data.username, data.password,60*60*24);
+			}
+			else{
+				deleteCookieWithKey(data.username)
+			}
+		window.location.href="index.jsp";
+		}
+          
+	});  
+	return false;
+} 
+
+//将用户名密码放入cookie
+function setCookie(username, password, c_time) {
+    document.cookie = username + "=" + password + ";max-age=" + c_time;
+}
+
+//将用户名密码从cookie中取出
+function getCookie(c_key) {
+	var arr = document.cookie.split("; ");
+    if(hasCookieWithKey(c_key)){
+    	 for(var i=0;i<arr.length;i++){
+    		 var temp = arr[i].split("=");
+    		 if(temp[0].trim() === c_key){
+    			 return temp[1];
+    		 }
+    	 }
+    }
+    else{
+        return null;
+    }
+}
+//修改
+function updataCookie(c_key, v_val){
+	if(hasCookieWithKey(c_key)){
+		document.cookie = c_key + "=" +v_val;
+	}
+}
+
+//删除
+function deleteCookieWithKey(c_key){
+    setCookie(c_key,"",-1);
+}
+
+//是否含有某个键名
+function hasCookieWithKey(c_key){ 
+	var arr = document.cookie.split("; "); 
+	for(var i=0;i<arr.length;i++){ 
+		var temp = arr[i].split("="); 
+		if(temp[0].trim() === c_key){ 
+			return true; 
+			} 
+		} 
+	return false; 
+	}
+var arrColor=["timg1","timg2","timg3"];
+var i=0;
+
+
+$("#loginUser1").blur(function(){
+	var user=$("#loginUser1").val();
+	var pass1=$("#loginPass1").val();
+	var pass2=$("#loginPass2").val();
+	if(user==""){
+		$(".regester-panelMainUser-Tip").html("账号不能为空");
+	}
+	else{
+		$(".regester-panelMainUser-Tip").html("");
+	}
+	if(pass1==""){
+		$(".regester-panelMainPass1-Tip").html("密码不能为空")
+	}
+	else{
+		$(".regester-panelMainPass1-Tip").html("")
+	}
+	if(pass2==""){
+		$(".regester-panelMainPass2-Tip").html("密码不能为空")
+	}
+	else{
+		$(".regester-panelMainPass2-Tip").html("")
+	}
+})
+$("#loginPass1").focus(function(){
+	$(".regester-panelMainPass1-Tip").html("以字母开头<br>长度在6~18之间<br>只能包含字母、数字和下划线")
+})
+$("#loginPass1").blur(function(){
+	var mat=/^[a-zA-Z]\w{5,17}$/;
+	var test=/^.{3,20}$/;
+	var user=$("#loginUser1").val();
+	var pass1=$("#loginPass1").val();
+	var pass2=$("#loginPass2").val();
+	if(user==""){
+		$(".regester-panelMainUser-Tip").html("账号不能为空");
+	}
+	else{
+		$(".regester-panelMainUser-Tip").html("");
+	}
+	if(pass1==""){
+		$(".regester-panelMainPass1-Tip").html("密码不能为空")
+	}
+	else{
+		if(pass1.match(mat)){
+			$(".regester-panelMainPass1-Tip").html("")
+		}
+		else{
+			$(".regester-panelMainPass1-Tip").html("以字母开头<br>长度在6~18之间<br>只能包含字母、数字和下划线")
+		}
+	}
+	if(pass2==""){
+		$(".regester-panelMainPass2-Tip").html("密码不能为空")
+	}
+	else{
+		$(".regester-panelMainPass2-Tip").html("")
+	}
+})
+
+$("#loginPass2").blur(function(){
+	var user=$("#loginUser1").val();
+	var pass1=$("#loginPass1").val();
+	var pass2=$("#loginPass2").val();
+	if(user==""){
+		$(".regester-panelMainUser-Tip").html("账号不能为空");
+	}
+	else{
+		$(".regester-panelMainUser-Tip").html("");
+	}
+	if(pass1==""){
+		$(".regester-panelMainPass1-Tip").html("密码不能为空")
+	}
+	else{
+		$(".regester-panelMainPass1-Tip").html("")
+	}
+	if(pass2==""){
+		$(".regester-panelMainPass2-Tip").html("密码不能为空")
+	}
+	else{
+		alert(pass1+"---"+pass2)
+		if(pass2!=pass1){
+			alert(pass1+"---")
+			$(".regester-panelMainPass2-Tip").html("前后密码不一致")
+		}
+		else{
+		$(".regester-panelMainPass2-Tip").html("")
+		}
+	}
+})
+$("#loginUser").blur(function(){
+	var userName=$("#loginUser").val();
+	
+	if(userName==""){
+		$(".login-panelMainUser-Tip").html("账号不能为空")
+	}
+	else {
+		$(".login-panelMainUser-Tip").html("")
+		$("#loginPass").val(getCookie($("#loginUser").val()))
+		if($("#loginPass").val()!=""){
+		$(".RemeberPass1").attr("checked","true");
+		}
+	}
+	var password=$("#loginPass").val();
+	if(password==""){
+		$(".login-panelMainPass-Tip").html("密码不能为空")
+	}
+	else{
+		$(".login-panelMainPass-Tip").html("")
+	}
+
+})
+
+$("#loginPass").blur(function(){
+	var userName=$("#loginUser").val();
+	var password=$("#loginPass").val();
+	if(userName==""){
+		$(".login-panelMainUser-Tip").html("账号不能为空")
+	}
+	else {
+		$(".login-panelMainUser-Tip").html("")
+	}
+	if(password==""){
+		$(".login-panelMainPass-Tip").html("密码不能为空")
+	}
+	else{
+		$(".login-panelMainPass-Tip").html("")
+		$(".RemeberPass1").attr("checked",true);
+	}
+	
+}) 
+
+</script>
+</html>

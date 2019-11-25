@@ -1,0 +1,62 @@
+@charset "UTF-8";
+.CheckInMainPanel{
+position:relative;
+width:1300px;
+height:635px;
+
+}
+.CheckOutMainPanel{
+position:relative;
+width:1300px;
+height:635px;
+}
+
+.CheckInMainPanelTop{
+	position:absolute;
+	z-index:1;
+	top:0px;
+	right:0px;
+	width:200px;
+	height:100px;
+	
+}
+.CheckInMainPanelReserveCheckIn{
+position:absolute;
+border-radius:2px 2px;
+top:10px;
+right:0px;
+height:20px;
+width:150px;
+background: rgb(255, 215, 0);
+cursor: pointer;
+
+}
+.CheckInMainPanelDirectCheckIn{
+position:absolute;
+top:35px;
+border-radius:2px 2px;
+right:0px;
+height:20px;
+width:100px;
+background: rgb(238, 221, 130);
+cursor: pointer;
+}
+.CheckInMainPanelCheckInOperate{
+position:absolute;
+top:60px;
+border-radius:2px 2px;
+right:0px;
+height:20px;
+width:100px;
+background: rgb(238, 221, 130);
+cursor: pointer;
+}
+.CheckInMainPanelDetel{
+position:absolute;
+border:solid 1px gold;
+display:inline;
+width:1300px;
+height:620px;
+top:0px;
+
+}

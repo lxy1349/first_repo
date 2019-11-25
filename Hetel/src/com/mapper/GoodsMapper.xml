@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.GoodsMapper">
+
+<resultMap type="com.po.GoodsAndType" id="GoodsResultMap">
+        <id column="goods_id" property="goods_id" />
+       
+          <result column="goods_name" property="goods_name" />   
+		  <result column="goods_type_id" property="goods_type_id" />  
+		  <result column="goods_number" property="goods_number" />	  
+		  <result column="goods_time" property="goods_time" />		
+		  <result column="goods_unit" property="goods_unit" />
+		  <result column="goods_referred" property="goods_referred" /> 	  
+		  <result column="goods_specifications" property="goods_specifications" />		
+		  <result column="ceiling_number" property="ceiling_number" />
+		  <result column="under_number" property="under_number" /> 
+		  
+		<collection property="goods_type" ofType="com.po.Goods_Type">
+		  <id column="goods_type_id" property="goods_type_id" />
+	      <result column="goods_type_name" property="goods_type_name" />
+		  <result column="goods_type_annotation" property="goods_type_annotation" />
+		 </collection>	
+		  
+</resultMap>
+
+<!--主键非增长型的框架-->
+<select id="findGoods" parameterType="String" resultMap="GoodsResultMap">
+		select * from goods  u LEFT JOIN goods_type c ON u.goods_type_id = c.goods_type_id   where u.goods_name like '%${value}%' or u.goods_referred like '%${value}%'
+</select>
+
+
+<!--主键非增长型的框架-->
+<select id="findGoodsById" parameterType="int" resultType="com.po.Goods">
+		select * from goods where goods_id = #{goods_id}
+</select>
+     
+     
+<!--查找所有的商品订单号-->
+<select id="findGoodsAll"  resultMap="GoodsResultMap">
+		select * from goods u LEFT JOIN goods_type c ON u.goods_type_id = c.goods_type_id    
+</select>
+
+<!--查找所有的商品订单号-->
+<select id="findGoodsAlllimit" parameterType="int"  resultMap="GoodsResultMap">
+		select * from goods  u LEFT JOIN goods_type c ON u.goods_type_id = c.goods_type_id    limit  #{number},12
+</select>
+
+<!--查找所有的商品订单号-->
+<select id="findGoodsTypeAll"  parameterType="int"  resultMap="GoodsResultMap">
+		select * from goods  u LEFT JOIN goods_type c ON u.goods_type_id = c.goods_type_id    where u.goods_type_id=#{goods_type_id}
+</select>
+
+<!--查找所有的商品订单号-->
+<select id="findGoodsTypeAlllimit"   resultMap="GoodsResultMap">
+		select * from goods  u LEFT JOIN goods_type c ON u.goods_type_id = c.goods_type_id    where u.goods_type_id=#{0} limit  #{1},12
+</select>
+
+
+	
+<!--主键非增长型的框架-->
+<insert id="addGoods" parameterType="com.po.Goods"  useGeneratedKeys="true" keyProperty="goods_id">
+		insert into goods(goods_name,goods_type_id,goods_number,goods_time,goods_unit,goods_referred,ceiling_number,under_number,goods_specifications)
+		values(#{goods_name},#{goods_type_id},#{goods_number},#{goods_time},#{goods_unit},#{goods_referred},#{ceiling_number},#{under_number},#{goods_specifications})
+</insert>	
+
+	<!--主键非增长型的框架-->
+<delete id="deleteGoodsById" parameterType="int">
+		delete from goods
+		where goods_id = #{goods_id}
+</delete>
+
+	<!--主键非增长型的框架-->
+<update id="updateGoods" parameterType="com.po.Goods">
+		update goods set
+        goods_name=#{goods_name},
+        goods_type_id=#{goods_type_id},
+        goods_number=#{goods_number},
+        goods_time=#{goods_time},
+        goods_unit=#{goods_unit},
+        goods_referred=#{goods_referred},
+        ceiling_number=#{ceiling_number},
+        under_number=#{under_number},
+        goods_specifications=#{goods_specifications}
+		where goods_id=#{goods_id}
+</update>	
+	
+	
+</mapper>

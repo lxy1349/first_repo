@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+ xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" 
+ xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xmlns:websocket="http://www.springframework.org/schema/websocket"
+ xsi:schemaLocation="  
+ http://www.springframework.org/schema/websocket http://www.springframework.org/schema/websocket/spring-websocket-4.0.xsd
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd  
+   http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd  
+   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd"> 
+	<!-- 1、加载外部资源文件 -->
+	<context:property-placeholder location="classpath:jdbc.properties" />
+	<!-- 2、配置数据库连接池 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driver}"></property>
+		<property name="jdbcUrl" value="${jdbc.url}"></property>
+		<property name="user" value="${jdbc.username}"></property>
+		<property name="password" value="${jdbc.password}"></property>
+	</bean>
+	<!-- 3、配置sqlSessionFactory 让spring来管理sqlSessionFactory,使用mybatis-spring包中的SqlSessionFactoryBean -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!-- 3.1 配置数据源 -->
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 3.2 加载mybatis全局配置文件 -->
+		<property name="configLocation" value="classpath:SqlMapConfig.xml"></property>
+		 <!-- 3.3 指定别名包 --> 
+		<!--<property name="typeAliasesPackage" value="com.hpe.po"></property> -->
+	</bean>
+	<!-- 4、使用包扫描的方式  批量创建mapper的bean ，bean的id就是接口名称，首字母小写 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<!-- 指定Mapper接口所在的包 basePackage：扫描包路径，中间可以用逗号或分号分隔定义多个包 -->
+		<property name="basePackage" value="com.mapper"></property>
+	</bean> 
+	<!-- 5、注解扫描 -->
+	<context:component-scan base-package="com.service"></context:component-scan>
+	<!-- 6.1、spring的声明式事务  事务管理器-->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<!-- 注入数据源 -->
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<!-- 6.2  注册事务注解驱动 -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+</beans>

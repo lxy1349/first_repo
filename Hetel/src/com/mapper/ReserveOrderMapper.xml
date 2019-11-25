@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.ReserveOrderMapper">
+<select id="getAllReserveOrder"  resultType="com.po.ReserveOrder">
+ select * from reserveorder 
+</select>
+<select id="getAllHetelInformation"  resultType="com.po.HetelLogol">
+ select * from hetelinformationpre where  (hetelState="住" and leaveDate  &lt;= #{orderDate} )  or (hetelState="空") or(hetelState="定")
+</select>
+<select id="getAllHetelInformation1"  resultType="com.po.HetelLogol">
+ select * from hetelinformationpre where  (hetelState="住" and leaveDate &lt;=#{orderDate}) or (hetelState="空") or(hetelState="定" and orderDate &lt;=#{leaveDate})or(hetelState="定" and leaveDate &lt;=#{orderDate})
+</select>
+<insert id="addReserveOrder"  parameterType="com.po.ReserveOrder">
+  insert into reserveorder(orderNumber,orderName,phoneNum,dayTimes,cashPledge,orderState,vip,orderDate,arriveDate,leaveDate,idnum,acceptName,roomNum) values(#{orderNumber},#{orderName},#{phoneNum},#{dayTimes},#{cashPledge},
+  #{orderState},#{vip},#{orderDate},#{arriveDate},#{leaveDate},#{idnum},#{acceptName},#{roomNum})
+</insert>
+
+<update id="updateRoomPreState" >
+  update hetelinformationpre set hetelState="定",orderDate = #{orderDate},leaveDate=#{leaveDate} where hetelId=#{hetelId} 
+</update>
+<update id="updateCheckInRoomPreState" >
+  update hetelinformationpre set hetelState="住",orderDate = #{orderDate},leaveDate=#{leaveDate} where hetelId=#{hetelId} 
+</update>
+<update id="updateRoomState2" >
+  update hetelinformation set hetelState="住" where hetelId=#{hetelId}
+</update>
+<update id="updatePreRoomState2" >
+  update hetelinformationpre set hetelState="住" where hetelId=#{hetelId}
+</update>
+<update id="ModifyReserveOrder"  parameterType="com.po.ReserveOrder">
+  update reserveorder set orderName=#{orderName},phoneNum=#{phoneNum},dayTimes=#{dayTimes},roomNum=#{roomNum},
+  orderState=#{orderState},vip=#{vip},orderDate=#{orderDate},arriveDate=#{arriveDate},leaveDate=#{leaveDate},idnum=#{idnum},acceptName=#{acceptName}
+  where orderNumber=#{orderNumber}
+</update>
+<update id="ModifyCheckInOrder"  parameterType="com.po.ReserveOrder">
+  update checkin set orderName=#{orderName},phoneNum=#{phoneNum},dayTimes=#{dayTimes},roomNum=#{roomNum},
+  orderState=#{orderState},vip=#{vip},orderDate=#{orderDate},arriveDate=#{arriveDate},realityDate=#{realityDate},leaveDate=#{leaveDate},idnum=#{idnum},acceptName=#{acceptName}
+  where orderNumber=#{orderNumber}
+</update>
+<delete id="DeleteReserveOrder">
+  delete from reserveorder where orderNumber=#{orderNumber}
+</delete>
+<delete id="DeleteCheckInOrder">
+  delete from checkin where orderNumber=#{orderNumber}
+</delete>
+<update id="updateRoomState1">
+  update hetelinformation set hetelState="空" where hetelId=#{hetelId}
+</update>
+<insert id="addCheckInOrder"  parameterType="com.po.ReserveOrder">
+  insert into checkin(orderNumber,orderName,phoneNum,dayTimes,orderState,vip,orderDate,leaveDate,
+  idnum,acceptName,roomNum,arriveDate,realityDate) values(#{orderNumber},#{orderName},#{phoneNum},#{dayTimes},
+  #{orderState},#{vip},#{orderDate},#{leaveDate},#{idnum},#{acceptName},#{roomNum},#{arriveDate},#{realityDate})
+</insert>
+<select id="ReserveOrderFind" resultType="com.po.ReserveOrder">
+  select * from reserveorder where orderNumber=#{orderNumber}
+</select>
+<select id="getAllCheckInOrder" resultType="com.po.ReserveOrder">
+   select * from checkin 
+</select>
+<select id="getAllCheckOutOrder" resultType="com.po.ReserveOrder">
+   select * from checkout
+</select>
+<select id="getOrderNumberCheckInOrder" resultType="com.po.ReserveOrder">
+   select * from checkin where orderNumber=#{orderNumber} 
+</select>
+<select id="getOrderNumberCheckOutOrder" resultType="com.po.CheckOutorder">
+   select * from checkin where orderNumber=#{orderNumber} 
+</select>
+<insert id="addRoomOrder">
+   insert into roomorder(roomid,roomPrice,roomStyle,roomCashPledge,roombeizhu,orderNumber) values(#{roomid},#{roomPrice},#{roomStyle},#{roomCashPledge},#{roombeizhu},#{orderNumber})
+</insert>
+<select id="getRoomlListOrder" resultType="com.po.RoomOrder">
+select * from roomorder where orderNumber=#{orderNumber}
+</select>
+<select id="indexCardId" parameterType="String" resultType="com.po.Vip">
+select * from idnum where vipIdNum=#{cardId}
+</select>
+<delete id="deleteRoomOrder">
+delete from roomorder where orderNumber=#{orderNumber}
+</delete>
+<update id="UpdatepreInfor">
+ update hetelinformation set orderName="",vip="" where hetelId=#{hetelId}
+</update>
+ <select id="getNeedReserveOrderBytime1"  resultType="int">
+ select orderNumber from reserveorder where leaveDate  &lt;=#{arriveDate}
+</select> 
+<select id="getNeedReserveOrderBytime"  resultType="int">
+ select orderNumber from reserveorder where (leaveDate  &lt;=#{arriveDate}) or(arriveDate &gt;=#{leaveDate})
+</select>
+
+<select id="getNeedCheckInOrderBytime"  resultType="int">
+ select orderNumber from checkin where (leaveDate  &lt;=#{arriveDate} )
+</select>
+
+<select id="getNeedReserveRoomBytime" resultType="int">
+select distinct roomid from roomorder  where orderNumber=#{orderNumber}
+</select>
+
+<select id="getNeedRoom" resultType="int">
+select hetelId from hetelinformation where  hetelinformation.hetelId not in(select distinct roomid from roomorder)
+</select>
+<select id="findHetelbyroomid" resultType="com.po.HetelLogol">
+select * from hetelinformation where hetelId=#{hetelId}
+</select>
+<delete id="DeleteRoomOrder">
+ delete from roomorder where orderNumber=#{orderNumber} and roomid=#{roomid}
+</delete>
+<select id="addfinishOrder" resultType="com.po.RoomOrder">
+select * from roomorder where orderNumber=#{orderNumber} and roomid=#{roomid}
+</select>
+<insert id="insertfinishOrder">
+insert into finishroomorder(orderNumber,roomid,roomPrice,roomStyle,roomCashPledge,roombeizhu) values(#{orderNumber},#{roomid},#{roomPrice},#{roomStyle},#{roomCashPledge},#{roombeizhu})
+</insert>
+<select id="findcheckouOrder" resultType="com.po.ReserveOrder">
+select * from checkout where orderNumber=#{orderNumber}
+</select>
+<insert id="addCheckOutOrder" >
+insert into checkout(orderNumber,orderName,phoneNum,dayTimes,orderState,vip,orderDate,leaveDate,idnum,acceptName,roomNum,arriveDate,realityDate,realityLeaveDate)values(#{orderNumber},#{orderName},#{phoneNum},#{dayTimes},
+  #{orderState},#{vip},#{orderDate},#{leaveDate},#{idnum},#{acceptName},#{roomNum},#{arriveDate},#{realityDate},#{realityLeaveDate})
+</insert>
+<insert id="addStoreInf">
+   insert into roomgoodsorder(goodsName,goodsPrice,orderNumber,roomid,goodsNum) values(#{goodsName},#{goodsPrice},#{orderNumber},#{roomid},#{goodsNum})
+</insert>
+ <select id="getAllRoomid" resultType="int">
+select hetelId from hetelinformation
+</select>
+<select id="needArriveTime"  resultType="com.po.Datefind">
+		SELECT roomid,arriveDate,leaveDate FROM  roomorder,reserveorder WHERE roomorder.orderNumber=reserveorder.orderNumber ORDER BY arriveDate 
+</select> 
+<select id="needzhuTime"  resultType="com.po.Datefind">
+		SELECT roomid,arriveDate,leaveDate FROM  roomorder,checkin WHERE roomorder.orderNumber=checkin.orderNumber ORDER BY arriveDate 
+</select> 
+<select id="finishOrder"  resultType="com.po.ReserveOrder">
+		SELECT * FROM checkout WHERE orderNumber=#{orderNumber}
+</select>
+<select id="findfRoomOrder"  resultType="com.po.RoomOrder">
+      select * from finishroomorder where orderNumber=#{orderNumber}
+</select>
+<select id="findDistinctStore"  resultType="com.po.RoomGoodsOrder">
+      select * from roomgoodsorder where orderNumber=#{orderNumber}
+</select>
+<select id="findCehckInRoom"  resultType="com.po.RoomOrder">
+      select * from roomorder where orderNumber=#{orderNumber}
+</select>
+<update id="updateRealityOrder">
+   update checkout set realityLeaveDate =#{realityLeaveDate} where orderNumber=#{orderNumber}
+</update>
+<select id="getStoreInfor" resultType="com.po.RoomGoodsOrder">
+select * from roomgoodsorder where orderNumber =#{orderNumber}
+</select>
+<delete id="deleteStoreInf">
+delete from roomgoodsorder where orderNumber =#{orderNumber}
+</delete>
+<delete id="deletefinishOrder">
+delete from checkout where orderNumber=#{orderNumber}
+</delete>
+<delete id="deletefinishRoomOrder">
+delete from finishroomorder where orderNumber=#{orderNumber}
+</delete>
+<delete id="deletefinishstore">
+delete from roomgoodsorder where orderNumber=#{orderNumber}
+</delete>
+<select id="roomAndName" resultType="com.po.RoomidAndUserName">
+ SELECT DISTINCT roomid,orderName,vip FROM reserveorder,roomorder WHERE reserveorder.orderNumber=roomorder.orderNumber AND arriveDate &lt;=#{nowDate} AND leaveDate &gt;=#{nowDate}
+</select>
+<select id="CheckInroomAndName" resultType="com.po.RoomidAndUserName">
+ SELECT DISTINCT roomid,orderName,vip FROM checkin,roomorder WHERE checkin.orderNumber=roomorder.orderNumber
+</select>
+
+</mapper>

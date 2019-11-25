@@ -1,0 +1,1122 @@
+@charset "UTF-8";
+.adddetel1{
+position: absolute;
+left:0px;
+top:-30px;
+width:1300px;
+height:700px;
+z-index:200;
+background: rgba(0,0,0,0.5);
+}
+.adddetel{
+position:absolute;
+left:150px;
+top:0px;
+width:900px;
+height:700px;
+background:#E8E8E8;
+border:solid 1px gray;
+}
+.adddetelTitle{
+position: relative;
+padding-top:10px;
+height:30px;
+text-align: center;
+font-size:20px;
+background:#4F4F4F;
+color:white;
+}
+.adddetelReservationInformation{
+position:relative;
+height:190px;
+}
+.adddetelReservationInformationTitle{
+position:relative;
+margin-top:20px;
+height:20px;
+}
+.adddetelReservationInformationTitleLine1{
+ position:relative;
+ float:left;
+ margin-left:20px;
+ margin-top:10px;
+ width:375px;
+ border-bottom:solid 1px black;
+ 
+}
+.adddetelReservationInformationTitleFont{
+ position:relative;
+ float:left;
+ margin-left:20px;
+ font-size: 15px;
+}
+.adddetelReservationInformationTitleLine2{
+ position:relative;
+ float:left;
+ margin-left:20px;
+ margin-top:10px;
+ width:375px;
+ border-bottom:solid 1px black;
+ 
+}
+.adddetelReservationInformationDetel{
+ position:relative;
+ top:20px;
+ height:200px;
+ font-size: 17px;
+}
+.adddetelReservationInformationDetelLine1{
+ position:relative;
+ height:30px;
+}
+.adddetelReservationInformationDetelName{
+ position:relative;
+ float:left;
+ margin-left:40px;
+width:270px; 
+height:20px;
+}
+ .adddetelReservationInformationDetelNameText{
+ position:relative;
+ margin-left:10px;
+ float:left;
+ width:70px; 
+ }
+ .adddetelReservationInformationDetelNameInput{
+   position:relative;
+   margin-left:5px;
+ float:left;
+  height:16px;
+ width:150px; 
+ }
+ .adddetelReservationInformationDetelNamelogol{
+ position:relative;
+ margin-left:5px;
+ float:left;
+ color:red;
+ width:20px; 
+ }
+ .adddetelReservationInformationDetelPhone{
+ position:relative;
+ float:left;
+margin-left:15px;
+width:270px; 
+height:20px;
+}
+ .adddetelReservationInformationDetelPhoneText{
+ position:relative;
+ margin-left:10px;
+ float:left;
+ width:70px; 
+ }
+ .adddetelReservationInformationDetelPhoneInput{
+   position:relative;
+   margin-left:5px;
+ float:left;
+  height:16px;
+ width:150px; 
+ }
+ .adddetelReservationInformationDetelPhonelogol{
+ position:relative;
+ margin-left:5px;
+ float:left;
+ color:red;
+ width:20px; 
+ }
+  .adddetelReservationInformationDetelCard{
+ position:relative;
+ float:left;
+ margin-left:25px;
+width:250px; 
+height:20px;
+}
+ .adddetelReservationInformationDetelCardText{
+ position:relative;
+ margin-left:5px;
+ float:left;
+ width:75px; 
+ }
+ 
+.adddetelReservationInformationDetelCardInput{
+   position:relative;
+   margin-left:0px;
+ float:left;
+  height:16px;
+ width:150px; 
+ }
+ .adddetelReservationInformationDetelCardlogol{
+ position:relative;
+ margin-left:5px;
+ float:left;
+ color:red;
+ width:10px; 
+ }
+ .adddetelReservationInformationDetelLine2{
+ position:relative;
+ margin-top:20px;
+ height:30px;
+}
+.adddetelReservationInformationDetelDate{
+  position:relative;
+ float:left;
+ margin-left:25px;
+width:260px; 
+height:20px;
+}
+.adddetelReservationInformationDetelDateArrive{
+ position:relative;
+ margin-left:5px;
+ float:left;
+ width:70px;
+}
+.adddetelReservationInformationDetelDateArriveInput{
+   position:relative;
+   margin-left:5px;
+ float:left;
+  height:16px;
+ width:150px; 
+}
+.adddetelReservationInformationDetelDateArriveIlogol{
+position:relative;
+ margin-left:5px;
+ float:left;
+ color:red;
+ width:20px; 
+}
+.adddetelReservationInformationDetelday{
+  position:relative;
+ float:left;
+ margin-left:10px;
+width:270px; 
+height:20px;
+}
+.adddetelReservationInformationDeteldayText{
+ position:relative;
+ margin-left:5px;
+ float:left;
+ width:70px; 
+}
+.adddetelReservationInformationDeteldayInput{
+   position:relative;
+   margin-left:5px;
+ float:left;
+  height:16px;
+ width:150px; 
+ 
+}
+.adddetelReservationInformationDeteldayInputLogol{
+  position:relative;
+ float:left;
+  height:40px;
+ width:20px; 
+}
+
+
+.adddetelReservationInformationDeteldaylogol{
+position:relative;
+ margin-left:5px;
+ float:left;
+ color:red;
+ width:20px;
+}
+.adddetelReservationInformationDetelDetelLeave{
+  position:relative;
+ float:left;
+ margin-left:40px;
+width:270px; 
+height:20px;
+}
+.adddetelReservationInformationDetelDateLeaveText{
+ position:relative;
+ margin-left:5px;
+ float:left;
+ width:70px; 
+}
+.adddetelReservationInformationDetelDateLeaveInput{
+   position:relative;
+   margin-left:5px;
+ float:left;
+  height:16px;
+ width:150px; 
+}
+.adddetelReservationInformationDetellogol{
+position:relative;
+ margin-left:5px;
+ float:left;
+ color:red;
+ width:20px;
+}
+.adddetelReservationInformationDetelLine3{
+ position:relative;
+ margin-top:20px;
+ height:30px;
+}
+.adddetelReservationInformationDetelSellername{
+  position:relative;
+ float:left;
+ margin-left:25px;
+width:250px; 
+height:20px;
+}
+.adddetelReservationInformationDetelSellernameText{
+ position:relative;
+ margin-left:5px;
+ float:left;
+ width:70px; 
+}
+.adddetelReservationInformationDetelSellernameInput{
+   position:relative;
+   margin-left:5px;
+ float:left;
+  height:16px;
+ width:150px; 
+}
+.adddetelReservationInformationDetelOrderNum{
+  position:relative;
+ float:left;
+ margin-left:20px;
+width:250px; 
+height:20px;
+}
+.adddetelReservationInformationDetelOrderNumText{
+ position:relative;
+ margin-left:5px;
+ float:left;
+ width:70px; 
+}
+.adddetelReservationInformationDetelOrderNumInput{
+   position:relative;
+   margin-left:30px;
+ float:left;
+  height:16px;
+ width:120px; 
+}
+.adddetelReservationInformationDetelOrderNumLogol{
+position:relative;
+ margin-left:5px;
+ float:left;
+ color:red;
+ width:20px;
+}
+.adddetelReservationInformationDetelorderCash{
+ position:relative;
+ float:left;
+ margin-left:20px;
+width:250px; 
+height:20px;
+}
+.adddetelReservationInformationDetelorderCashpeldge{
+ position:relative;
+ margin-left:30px;
+ float:left;
+ width:70px; 
+}
+.adddetelReservationInformationDetelorderCashpeldgeInput{
+position:relative;
+  margin-left:5px;
+ float:left;
+  height:16px;
+ width:120px; 
+}
+.adddetelRoomInformation{
+position:relative;
+margin-top:10px;
+height:250px;
+}
+.adddetelRoomInformationTitle{
+position:relative;
+margin-top:10px;
+height:20px;
+}
+.adddetelRoomInformationTitleLine1{
+ position:relative;
+ float:left;
+ margin-left:20px;
+ margin-top:10px;
+ width:375px;
+ border-bottom:solid 1px black;
+}
+.adddetelRoomInformationTitleFont{
+ position:relative;
+ float:left;
+ margin-left:20px;
+ font-size: 15px;
+}
+.adddetelRoomInformationTitleLine2{
+ position:relative;
+ float:left;
+ margin-left:20px;
+ margin-top:10px;
+ width:375px;
+ border-bottom:solid 1px black;
+}
+.adddetelRoomInformationLeftandRight{
+position:relative;
+
+ height:350px;
+ 
+}
+.adddetelRoomInformationLeft{
+ position:relative;
+ float:left;
+ margin-left:20px;
+ margin-top:20px;
+ width:300px;
+ height:350px;
+ background:white;
+ border:solid 1px gray; 
+}
+.adddetelRoomInformationLeftTitle{
+position:relative;
+ height:20px;
+ font-size: 15px;
+  text-align: center;
+ color:white;
+}
+.adddetelRoomInformationLeftTitleRoomStyle{
+position:relative;
+float:left;
+background:#4F4F4F;
+width:70px;
+ font-size: 15px;
+}
+.adddetelRoomInformationLeftTitleAllNum{
+position:relative;
+float:left;
+margin-left:5px;
+background:#4F4F4F;
+width:70px;
+ font-size: 15px;
+}
+.adddetelRoomInformationLeftTitlScheduleNum{
+position:relative;
+float:left;
+margin-left:5px;
+background:#4F4F4F;
+width:70px;
+ font-size: 15px;
+}
+.adddetelRoomInformationLeftTitlAlreadyeNum{
+position:relative;
+float:left;
+margin-left:5px;
+background:#4F4F4F;
+width:70px;
+ font-size: 15px;
+}
+.adddetelRoomInformationLeftContent{
+ position:relative;
+ height:300px;
+ font-size: 15px;
+}
+.adddetelRoomInformationLeftContent table tr{
+position: relative;
+left:0px;
+ width:300px;
+height:40px;
+text-align: center;
+
+}
+.adddetelRoomInformationLeftContent table tr:nth-child(odd) {
+	background: #CFCFCF;
+	 width:300px;
+   height:40px;
+   text-align: center;
+
+}
+.adddetelRoomInformationLeftContentTwoRoom{
+position: relative;
+float:left;
+margin-left: 0px;
+width:80px;
+}
+.adddetelRoomInformationLeftContentTwoRoomAllReserve{
+position: relative;
+float:left;
+margin-left: 5px;
+width:50px;
+}
+.adddetelRoomInformationLeftContentTwoRoomReserve{
+position: relative;
+float:left;
+margin-left: 5px;
+height:22px;
+width:50px;
+}
+.adddetelRoomInformationLeftContentTwoRoomAlreadyReserve{
+position: relative;
+float:left;
+margin-left: 5px;
+width:70px;
+}
+.adddetelRoomInformationLeftContentOneRoom{
+position: relative;
+float:left;
+margin-left: 0px;
+width:80px;
+}
+.adddetelRoomInformationLeftContentOneRoomAllReserve{
+position: relative;
+float:left;
+margin-left: 0px;
+width:60px;
+}
+.adddetelRoomInformationLeftContentOneRoomReserve{
+position: relative;
+float:left;
+margin-left: 10px;
+height:22px;
+width:50px;
+}
+.adddetelRoomInformationLeftContentOneRoomAlreadyReserve{
+position: relative;
+float:left;
+margin-left: 5px;
+width:70px;
+}
+.adddetelRoomInformationLeftContentThreeRoom{
+position: relative;
+float:left;
+margin-left: 0px;
+width:70px;
+
+}
+.adddetelRoomInformationLeftContentThreeRoomAllReserve{
+position: relative;
+float:left;
+margin-left: 5px;
+width:70px;
+}
+.adddetelRoomInformationLeftContentThreeRoomReserve{
+position: relative;
+float:left;
+margin-left: 5px;
+height:22px;
+width:50px;
+}
+.adddetelRoomInformationLeftContentThreeRoomAlreadyReserve{
+position: relative;
+float:left;
+margin-left: 5px;
+width:70px;
+}
+.adddetelRoomInformationLeftContentTaoRoom{
+position: relative;
+float:left;
+margin-left: 0px;
+width:70px;
+}
+.adddetelRoomInformationLeftContentTaoRoomAllReserve{
+position: relative;
+float:left;
+margin-left: 5px;
+width:70px;
+}
+.adddetelRoomInformationLeftContentTaoRoomReserve{
+position: relative;
+float:left;
+margin-left: 5px;
+height:22px;
+width:50px;
+}
+.adddetelRoomInformationLeftContentTaoRoomAlreadyReserve{
+position: relative;
+float:left;
+margin-left: 5px;
+width:70px;
+}
+.adddetelRoomInformationRight{
+position: relative;
+float:left;
+margin-top:20px;
+margin-left:10px;
+width:550px;
+height:310px;
+background:white;
+overflow:scroll;
+border:solid 1px gray;
+}
+.adddetelRoomInformationRightBottom{
+	position: relative;
+	left:332px;
+	top:332px;
+	width:550px;
+	height:40px;
+	background:white;
+	border:solid 1px gray;
+}
+.adddetelRoomInformationRightBottomCashPledge{
+	position:absolute;
+	left:162px;
+	top:10px;
+}
+.adddetelRoomInformationRightBottomroomPrice{
+	position:absolute;
+	left:272px;
+	top:10px;
+}
+.adddetelRoomInformationRightBottomTotalPrice{
+	position:absolute;
+	left:382px;
+	top:10px;
+	color:red;
+}
+.adddetelRoomInformationRightTitleAllCheck{
+position:relative;
+float:left;
+margin-left:5px;
+background:#4F4F4F;
+width:30px;
+height:20px;
+}
+.adddetelRoomInformationRightTitleText{
+position:relative;
+float:left;
+margin-left:5px;
+background:#4F4F4F;
+color:white;
+width:70px;
+text-align: center;
+}
+.adddetelRoomInformationRightTitleText1{
+position:relative;
+float:left;
+margin-left:5px;
+background:#4F4F4F;
+color:white;
+width:190px;
+text-align: center;
+}
+.adddCheckBox{
+ position:relative;
+float:left;
+margin-left:5px;
+width:20px;
+}
+.adddetelRoomInformationRightContentRoomType{
+position:relative;
+float:left;
+margin-left:10px;
+width:70px;
+}
+.adddetelRoomInformationRightContentRoomNum{
+position:relative;
+float:left;
+margin-left:5px;
+width:100px;
+}
+.adddetelRoomInformationRightContentRoomNumText{
+position:relative;
+float:left;
+margin-left:5px;
+width:60px;
+}
+.adddetelRoomInformationRightContentRoomNumLogol{
+position:relative;
+float:left;
+margin-left:0px;
+border:solid 1px gray;
+background:white;
+height:10px;
+padding-bottom:9px;
+width:15px;
+cursor: pointer;
+}
+.adddetelRoomInformationRightContentRoomNumLogol:hover{
+background: gray;
+}
+.adddetelRoomInformationRightContentRoomPrice{
+position:relative;
+float:left;
+margin-left:5px;
+width:50px;
+}
+.adddetelRoomInformationRightContentCashPledge{
+position:relative;
+float:left;
+margin-left:15px;
+width:50px;	
+}
+.adddetelRoomInformationRightContentRoomPriceRemarks{
+position:relative;
+float:left;
+margin-left:0px;
+width:120px;
+}
+.RemarksDetel{
+position:relative;
+width:195px;
+margin-left:0px;
+}
+.adddetelRoomInformationRightContent table{
+
+font-size: 14px;
+
+}
+.adddetelRoomInformationRightContent table tbody{
+position:relative;
+width:300px;
+height:35px;
+background: white;
+}
+.adddetelRoomInformationRightContent table tbody:nth-child(odd) {
+   background: #CFCFCF;
+   width:300px;
+   height:35px;
+
+}
+.adddetelOperate{
+position:relative;
+margin-top:35px;
+height:40px;
+}
+.adddetelOperateDetel1{
+position: relative;
+margin-top:10px;
+heght:20px;
+text-align: center;
+
+}
+.adddetelOperateDetel2{
+position: relative;
+margin-top:10px;
+heght:20px;
+text-align: center;
+}
+.adddetelOperateDetelAuto{
+position:relative;
+float:left;
+ margin-left:350px;
+ height:20px;
+ width:100px;
+ background:#EEB422;
+ cursor: pointer;
+ 
+}
+.adddetelOperateDetelAuto:hover{
+opacity: 0.7;
+}
+.adddetelOperateDetelDelete{
+position:relative;
+ margin-left:20px;
+ float:left;
+  height:20px;
+  width:100px;
+ background:#EEB422;
+ cursor: pointer;
+}
+.adddetelOperateDetelDelete:hover{
+opacity: 0.7;
+}
+.adddetelOperateDetelPreserve{
+position:relative;
+ margin-left:20px;
+ float:left;
+  height:20px;
+  width:100px;
+ background:#EEB422;
+ cursor: pointer;
+}
+.adddetelOperateDetelPreserve:hover{
+opacity: 0.7;
+}
+.adddetelOperateDetelConcel{
+position:relative;
+ margin-left:20px;
+ float:left;
+  height:20px;
+  width:100px;
+background:#EEB422;
+cursor: pointer;
+}
+.adddetelOperateDetelConcel:hover{
+opacity: 0.7;
+}
+.Twoarrow{
+	position:relative;
+	float:left;
+	height:25px;
+	width:15px; 
+	border:solid 1px gray;
+	background: white;
+}
+
+.Twoarrow-up {  
+	position:relative;
+    width: 0;   
+    height: 0;   
+    border-left: 8px solid transparent;  
+    border-right: solid 8px  transparent;
+    border-bottom:8px solid;   
+    font-size: 0;  
+    line-height: 0;  
+    cursor: pointer;
+}
+.Twoarrow-up:hover {  
+   opacity: 0.5;
+}
+.Twoarrow-down{
+	position:relative;
+	top:5px;
+    width: 0;   
+    height: 0;   
+    border-left: 8px solid transparent;  
+    border-right: 8px solid transparent;  
+    border-top: 8px solid black;  
+    font-size: 0;  
+    line-height: 0;  
+    cursor: pointer;
+}
+.Twoarrow-down:hover{
+    opacity: 0.5;
+}
+.Threearrow{
+	position:relative;
+	float:left;
+	height:25px;
+	width:15px; 
+	border:solid 1px gray;
+	background: white;
+}
+
+.Threearrow-up{  
+	position:relative;
+    width: 0;   
+    height: 0;   
+    border-left: 8px solid transparent;  
+    border-right: solid 8px  transparent;
+    border-bottom:8px solid;   
+    font-size: 0;  
+    line-height: 0; 
+    cursor: pointer; 
+}
+.Threearrow-up:hover{  
+ opacity: 0.5;
+}
+.Threearrow-down{
+	position:relative;
+	top:5px;
+    width: 0;   
+    height: 0;   
+    border-left: 8px solid transparent;  
+    border-right: 8px solid transparent;  
+    border-top: 8px solid black;  
+    font-size: 0;  
+    line-height: 0;  
+     cursor: pointer; 
+}
+.Threearrow-down:hover{
+ opacity: 0.5;
+}
+.Onearrow{
+	position:relative;
+	float:left;
+	height:25px;
+	width:15px; 
+	border:solid 1px gray;
+	background: white;
+}
+
+.Onearrow-up {  
+	position:relative;
+    width: 0;   
+    height: 0;   
+    border-left: 8px solid transparent;  
+    border-right: solid 8px  transparent;
+    border-bottom:8px solid;   
+    font-size: 0;  
+    line-height: 0;  
+    cursor: pointer;
+}
+.Onearrow-up:hover {  
+   opacity: 0.5;
+}
+.Onearrow-down{
+	position:relative;
+	top:5px;
+    width: 0;   
+    height: 0;   
+    border-left: 8px solid transparent;  
+    border-right:8px solid transparent;  
+    border-top: 8px solid black;  
+    font-size: 0;  
+    line-height: 0;  
+    cursor: pointer;
+}
+.Onearrow-down:hover{
+   opacity: 0.5;
+}
+.Taoarrow{
+	position:relative;
+	float:left;
+	height:25px;
+	width:15px; 
+	border:solid 1px gray;
+	background: white;
+}
+
+.Taoarrow-up {  
+	position:relative;
+    width: 0;   
+    height: 0;   
+    border-left: 8px solid transparent;  
+    border-right: solid 8px  transparent;
+    border-bottom:8px solid;   
+    font-size: 0;  
+    line-height: 0; 
+    cursor: pointer; 
+}
+.Taoarrow-up:hover {  
+    opacity: 0.5;
+}
+.Taoarrow-down{
+	position:relative;
+	top:5px;
+    width: 0;   
+    height: 0;   
+    border-left: 8px solid transparent;  
+    border-right: 8px solid transparent;  
+    border-top: 8px solid black;  
+    font-size: 0;  
+    line-height: 0;
+    cursor: pointer;  
+}
+.Taoarrow-down:hover{
+    opacity: 0.5;
+}
+#ArriveInput{
+ position: absolute;
+left:255px;
+top:122px;  
+z-index:200;
+ width:120px;
+}
+#LeaveInput{
+ position: absolute;
+left:820px;
+top:122px;  
+ width:120px;
+ z-index:200;
+}
+#CheckInLeaveInput{
+ position: absolute;
+left:820px;
+top:122px;  
+ width:120px;
+ z-index:200;
+}
+/* 小弹框部分 */
+.logolFunctionPanel{
+position: absolute;
+left:0px;
+top:-30px;
+width:1300px;
+height:700px;
+z-index:200;
+background: rgba(0,0,0,0.5);
+}
+.logolFunction{
+  position:absolute;
+  background:white;
+  left:300px;
+  top:200px;
+  height:300px;
+  width:500px;
+  border:solid 1px gray;
+}
+.logolFunctionTitel{
+  position: relative;
+  height:20px;
+  color:white;
+   text-align:center;
+  background: #4F4F4F;
+}
+.logolFunctionOption{
+  position: relative;
+  height:200px;
+  margin-top:10px;
+  border:solid 1px gray;
+}
+.logolFunctionOptionLeft{
+  position: relative;
+  float:left;
+  width:100px;
+  height:200px;
+  border:solid 1px gray;
+}
+.logolFunctionOptionLeftTitle{
+  position: relative;
+  height:20px;
+  text-align:center;
+  color:white;
+  background: #4F4F4F;
+}
+.logolFunctionOptionLeftRoomStyle{
+  position: relative;
+  text-align:center;
+  margin-top:10px;
+}
+.logolFunctionOptionRight{
+  position: relative;
+  margin-left:5px;
+  float:left;
+  width:388px;
+  height:200px;
+  overflow-y:scroll;
+  border:solid 1px gray;
+}
+.logolFunctionOptionRightTitle{
+  position: relative;
+  height:20px;
+}
+.logolFunctionOptionRightTitleFloor{
+  position: relative;
+  float:left;
+  width:50px;
+  height:20px;
+  color:white;
+  background: #4F4F4F;
+  text-align: center;
+}
+.logolFunctionOptionRightTitleRoomNum{
+  position: relative;
+  float:left;
+  margin-left:5px;
+  width:315px;
+  height:20px;
+  color:white;
+  background: #4F4F4F;
+  text-align: center;
+}
+.logolFunctionOptionRightDetel{
+  position: relative;
+  width:370px;
+  height: 200px;
+}
+.logolFunctionOptionRightDetelList{
+  position: relative;
+  display:inline-block;
+  margin-top:5px;
+  padding-top:5px;
+  padding-bottom:5px;
+  border:solid 1px gray;
+}
+.logolFunctionOptionRightDetelFloor{
+  position: relative;
+  float:left;
+  margin-top:3px;
+  margin-left:5px;
+  width:40px;
+  background:#CFCFCF;
+  text-align: center;
+}
+.logolFunctionOptionRightDetelRoomNum{
+  position: relative;
+  float:left;
+  width:310px;
+  margin-left: 10px;
+}
+
+.logolFunctionOptionRightDetelRoomNumList{
+  position: relative;
+  float:left;
+  margin-right:5px;
+  margin-top:3px;
+  width:60px;
+  background: rgb(0, 205, 0);
+  cursor: default;
+}
+.checkboxRoomNum1{
+  position: relative;
+  float:left;
+  width:20px;
+}
+.checkboxRoomNum2{
+  position: relative;
+  float:left;
+  width:30px;
+}
+.logolFunctionInAndOut{
+  position: relative;
+  margin-top:10px;
+  width:370px;
+  height:50px;
+}
+.logolFunctionIn{
+  position: relative;
+  float:left;
+  margin-left:260px;
+  width:50px;
+  height:20px;
+  background:#EEB422;
+  text-align:center;
+  cursor: pointer;
+}
+.logolFunctionIn:hover{
+opacity: 0.5;
+}
+.logolFunctionOut{
+  position: relative;
+  float:left;
+  margin-left:10px;
+  width:50px;
+  height:20px;
+  background:#EEB422;
+  text-align:center;
+  cursor: pointer;
+}
+.logolFunctionOut:hover {
+	opacity: 0.5;
+}
+#adddetelReservationInformatioTable{
+	position:relative;
+	margin-top:0px;
+	margin-left:0px;
+	width:900px;
+	height:200px;
+	background:white;
+	border:solid 1px #DCDCDC;
+}
+#adddetelReservationInformatioTable tr{
+	position:relative;
+	margin-top:0px;
+	height:30px;
+	border:solid 1px #DCDCDC;
+}
+#adddetelReservationInformatioTable tr td{
+	position:relative;
+	margin-top:0px;
+	width:150px;
+	border:1px solid;
+	text-align: left;
+	border:solid 1px #DCDCDC;
+}
+.CheckOutBottomBack{
+	position:relative;
+	margin-top:20px;
+	margin-left:700px;
+	width: 60px;
+	height:25px;
+text-align: center;
+font-size: 16px;
+background-color: #EEB422;
+cursor: pointer;
+
+}
+.CheckOutBottomBack:hover{
+	opacity: 0.5;
+}
+.phonelogol{
+	position: absolute;
+	left:375px;
+	top:-138px;
+	font-size:12px;
+	color:red;
+}
+.idNumlogol{
+	position: absolute;
+	left:105px;
+	top:-138px;
+	font-size:12px;
+	color:red;
+}

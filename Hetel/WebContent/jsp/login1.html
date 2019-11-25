@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script src="../JS/jquery-3.3.1.js"></script>
+<link rel="stylesheet" href="Add.css"/>
+<style type="text/css">
+
+.HTML{
+    width:100%;
+    height:100%;
+}
+.Body{
+    position:relative;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    user-select:none;
+}
+    .Background {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/login_topic_3.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .Background img {
+        position: absolute;
+        top: 56px;
+        left: 50%;
+        width: 560px;
+        height: 185px;
+        transform: translateX(-50%);
+    }
+
+
+    .Model_Switch {
+        position: absolute;
+        top: 280px;
+        left: 50%;
+        width: 22px;
+        height: 22px;
+        transform: translateX(-50%);
+    }
+        .Model_Switch div {
+            width: 22px;
+            height: 22px;
+            background-image: url("../img/Model_Switch2.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .Model_Switch div:hover {
+            cursor: pointer;
+            animation: LoginOrRegistered 0.35s forwards;
+        }
+
+    .Model_Login {
+        position: absolute;
+        top: 336px;
+        left: 50%;
+        width: 320px;
+        height: 280px;
+        transform: translateX(-50%);
+    }
+
+    .Model_Registered {
+        position: absolute;
+        top: 336px;
+        left: 50%;
+        width: 320px;
+        height: 336px;
+        transform: translateX(-50%);
+    }
+
+    .Model_Login_Icon {
+        position: absolute;
+        top:56px;
+        left:44px;
+        width: 19px;
+        height: 19px;
+        background-image: url("../img/Model_ID.png");
+        background-size: 70% 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .Model_Login_Input {
+        position: absolute;
+        top: 48px;
+        left: 80px;
+        width: 170px;
+        height: 32px;
+        background: rgba(250, 250, 250, 0.9);
+        padding: 0px 12px 0px 12px;
+        font-size: 13px;
+        color: rgba(53, 53, 53, 1);
+        border: 1px solid rgba(216, 216, 216, 1);
+        outline: none;
+        border-radius: 7px;
+    }
+
+    .Model_Pass_Icon {
+        position: absolute;
+        top: 122px;
+        left: 44px;
+        width: 19px;
+        height: 19px;
+        background-image: url("../img/Model_Pass.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .Model_Pass_Input {
+        position: absolute;
+        top: 112px;
+        left: 80px;
+        width: 170px;
+        height: 32px;
+        padding: 0px 12px 0px 12px;
+        border: 1px solid rgba(216, 216, 216, 1);
+        background: rgba(250, 250, 250, 0.9);
+        outline: none;
+        border-radius: 7px;
+    }
+
+    .Model_PassConfirm_Icon {
+        position: absolute;
+        top: 185px;
+        left: 44px;
+        width: 18px;
+        height: 18px;
+        background-image: url("../img/Model_PassConfirm.png");
+        background-size: 80% 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .Model_PassConfirm_Input {
+        position: absolute;
+        top: 176px;
+        left: 80px;
+        width: 170px;
+        height: 32px;
+        padding: 0px 12px 0px 12px;
+        border: 1px solid rgba(216, 216, 216, 1);
+        background: rgba(250, 250, 250, 0.9);
+        outline: none;
+        border-radius: 7px;
+    }
+
+    .Model_Input_PlaceHolder {
+        color: rgba(53,53,53,0.75);
+        font-size: 13px;
+    }
+    .Model_Input_PlaceHolder::-webkit-input-placeholder {
+        color: rgba(53,53,53,0.5);
+    }
+    .Model_Input_PlaceHolder::-moz-placeholder {
+        color: rgba(53,53,53,0.5);
+    }
+
+
+    .Model_Remember {
+        position: absolute;
+        top: 122px;
+        left: 250px;
+        width: 14px;
+        height: 14px;
+    }
+    .Model_Remember:hover{
+        cursor:pointer;
+    }
+    .Model_Remember_Icon1 {
+        width: 14px;
+        height: 14px;
+        background-image: url("../img/Model_Remember_1.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .Model_Remember_Icon2 {
+        width: 14px;
+        height: 14px;
+        background-image: url("../img/Model_Remember_2.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+    .Model_Login_Button {
+        position: absolute;
+        top: 212px;
+        left: 50%;
+        width: 160px;
+        height: 36px;
+        transform: translateX(-50%);
+        border-radius: 5px;
+        background: rgba(54, 149, 169, 0.95);
+    }
+        .Model_Login_Button span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80px;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 1);
+        }
+        .Model_Login_Button:hover {
+            cursor: pointer;
+            opacity: 0.9;
+        }
+    .Module_Login_Message {
+        position: absolute;
+        top: 176px;
+        left: 0;
+        width: 100%;
+        height: 24px;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: rgba(51, 51, 51, 0.75);
+    }
+
+    .Model_Registered_Button {
+        position: absolute;
+        top: 280px;
+        left: 50%;
+        width: 160px;
+        height: 36px;
+        transform: translateX(-50%);
+        border-radius: 5px;
+        background: rgba(54, 149, 169, 0.95);
+    }
+        .Model_Registered_Button span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80px;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 1);
+        }
+        .Model_Registered_Button:hover {
+            cursor: pointer;
+            opacity: 0.9;
+        }
+    .Module_Registered_Message {
+        position: absolute;
+        top: 225px;
+        left: 0;
+        width: 100%;
+        height: 24px;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: rgba(51, 51, 51, 0.75);
+    }
+
+    .Model_RegisteredToLoginPlane {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 320px;
+        height: 280px;
+        border-radius: 5px;
+        background-color: rgba(250,250,250,0.75);
+    }
+    .Model_RegisteredToLoginPlane_Animation {
+        animation: RegisteredToLoginPlane 0.75s forwards linear 0s;
+    }
+    .Model_LoginToRegisteredPlane {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 320px;
+        height: 336px;
+        border-radius: 5px;
+        background-color: rgba(250,250,250,0.75);
+        animation: LoginToRegisteredPlane 0.75s forwards linear 0s;
+    }
+    .Model_Switch_Animation {
+        animation: Switch 0.75s forwards linear 0s;
+    }
+    .Model_Switch_None{
+
+    }
+
+    @keyframes LoginToRegisteredPlane {
+        0% {
+            height:280px;
+            transform: rotateY(-180deg);
+        }
+        100% {
+            height:336px;
+            transform: rotateY(0deg);
+        }
+    }
+    @keyframes RegisteredToLoginPlane {
+        0% {
+            height: 336px;
+            transform: rotateY(-180deg);
+        }
+
+        100% {
+            height: 280px;
+            transform: rotateY(0deg);
+        }
+    }
+    @keyframes Switch{
+        0% {
+            opacity: 0;
+        }
+        99%{
+            opacity:0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes LoginOrRegistered {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(180deg);
+        }
+    }
+
+</style>
+<html class="HTML">
+<body class="Body">
+    <div class="Background"><img src="../img/login_top_1.png" /></div>
+    <div id="Model_Switch" class="Model_Switch" panel="login" onclick="Model_Switch()" title="登录/注册"><div></div></div>
+    <div  id="Model_Login" class="Model_Login"  style="display:initial;">
+        <div class="Model_RegisteredToLoginPlane" first="0">
+            <div class="Model_Switch_None">
+                <div class="Model_Login_Icon"></div>
+                <input class="Model_Login_Input Model_Input_PlaceHolder" id="loginUser" name="username" type="text" placeholder="账号" autocomplete="off"/>
+                <div class="Model_Pass_Icon"></div>
+                <input class="Model_Pass_Input Model_Input_PlaceHolder" id="loginPass" name="password" type="password" placeholder="密码" autocomplete="off"/>
+                <div id="Model_Remember" class="Model_Remember Model_Remember_Icon1" remember="0" title="记住密码" onclick="Model_Remember()"></div>
+                <div class="Module_Login_Message"></div>
+                <div  class="Model_Login_Button" onclick="saveSubmits()"><span>登录</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Model_Registered" class="Model_Registered" style="display:none;">
+        <div class="Model_LoginToRegisteredPlane Model_LoginToRegisteredPlane_Animation">
+            <div class="Model_Switch_Animation">
+                <div class="Model_Login_Icon"></div>
+                <input class="Model_Login_Input Model_Input_PlaceHolder" id="loginUser1" name="username" type="text" placeholder="账号" autocomplete="off"/>
+                <div class="Model_Pass_Icon"></div>
+                <input class="Model_Pass_Input Model_Input_PlaceHolder" id="loginPass1" name="password1" type="password" placeholder="密码" autocomplete="off"/>
+                <div class="Model_PassConfirm_Icon"></div>
+                <input class="Model_PassConfirm_Input Model_Input_PlaceHolder" id="loginPass2" name="password2" type="password" placeholder="确认密码" autocomplete="off"/>
+                <div class="Module_Registered_Message"></div>
+                <div class="Model_Registered_Button" onclick="registerSubmits()"><span>注册</span></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="Add.js"></script>
+    <script type="text/javascript">
+    $("#loginUser").blur(function(){
+    	var userName=$("#loginUser").val();
+    	
+    	if(userName==""){
+    		$(".Module_Login_Message").html("账号不能为空")
+    	}
+    	else {
+    		$(".Module_Login_Message").html("")
+    		$("#loginPass").val(getCookie($("#loginUser").val()))
+    		if($("#loginPass").val()!=""){
+    		$("#Model_Remember").attr("remember","1");
+    		document.getElementById("Model_Remember").className = 'Model_Remember Model_Remember_Icon2';
+    		}
+    	}
+
+    })
+ $("#loginPass").blur(function(){
+	var userName=$("#loginUser").val();
+	var password=$("#loginPass").val();
+	if(userName==""){
+		$(".Module_Login_Message").html("账号不能为空")
+	}
+	else {
+		$(".Module_Login_Message").html("")
+		if(password==""){
+			$(".Module_Login_Message").html("密码不能为空")
+		}
+		else{
+			$(".Module_Login_Message").html("")
+    		$("#Model_Remember").attr("remember","1");
+    		document.getElementById("Model_Remember").className = 'Model_Remember Model_Remember_Icon2';
+		}
+	}	
+}) 
+ function saveSubmits(){
+    	var userName=$("#loginUser").val();
+    	var password=$("#loginPass").val();
+    	if(userName==""){
+    		$(".Module_Login_Message").html("账号不能为空")
+    	}else{
+    		if(password==""){
+    			$(".Module_Login_Message").html("密码不能为空")
+    		}
+    		else{
+    			$
+    			.ajax({
+    				type : "post",
+    				url : "../user/findUserById",
+    				data : {username:userName,password:password},
+    				dataType : "json",
+    				success : function(data) {
+  	     if(data.username!="-1"){
+		if($("#Model_Remember").attr("remember")=="1"){
+				setCookie(data.username, data.password,60*60*24);
+			}
+			else{
+				deleteCookieWithKey(data.username)
+			}
+		
+		window.location.href="index.jsp";
+		}
+  	 else{
+  		$(".Module_Login_Message").html("密码错误")
+  	 } 	
+  	 
+	}});  
+    	}
+    	}
+}
+    $("#loginUser1").blur(function(){
+    	var user=$("#loginUser1").val();
+    	var pass1=$("#loginPass1").val();
+    	var pass2=$("#loginPass2").val();
+    	if(user==""){
+    		$(".Module_Registered_Message").html("账号不能为空");
+    	}
+    	else{
+    		$(".Module_Registered_Message").html("")
+    	}
+    
+    })
+    $("#loginPass1").focus(function(){
+	$(".Module_Registered_Message").html("以字母开头<br>长度在6~18之间<br>只能包含字母、数字和下划线")
+})
+ $("#loginPass1").blur(function(){
+	var mat=/^[a-zA-Z]\w{5,17}$/;
+	var test=/^.{3,20}$/;
+	var user=$("#loginUser1").val();
+	var pass1=$("#loginPass1").val();
+	var pass2=$("#loginPass2").val();
+	if(user==""){
+		$(".Module_Registered_Message").html("账号不能为空");
+	}
+	else{
+		if(pass1==""){
+			$(".Module_Registered_Message").html("密码不能为空")
+		}
+		else{
+			if(pass1.match(mat)){
+				$(".Module_Registered_Message").html("")
+			}
+			else{
+				$(".Module_Registered_Message").html("密码以字母开头<br>长度在6~18之间<br>只能包含字母、数字和下划线")
+			}	
+		}
+	}
+	
+})
+$("#loginPass2").blur(function(){
+	var mat=/^[a-zA-Z]\w{5,17}$/;
+	var test=/^.{3,20}$/;
+	var user=$("#loginUser1").val();
+	var pass1=$("#loginPass1").val();
+	var pass2=$("#loginPass2").val();
+	if(user==""){
+		$(".Module_Registered_Message").html("账号不能为空");
+	
+	}
+	else{
+		if(pass1==""){
+			$(".Module_Registered_Message").html("密码不能为空")
+		}
+		else{
+			if(pass1.match(mat)){
+				if(pass2==""){
+					$(".Module_Registered_Message").html("确认密码不能为空")
+				}
+				else{
+					if(pass2!=pass1){
+						$(".Module_Registered_Message").html("前后密码不一致")
+					}
+					else{
+					  $(".Module_Registered_Message").html("")
+					}
+				}
+			}
+			else{
+				$(".Module_Registered_Message").html("密码以字母开头<br>长度在6~18之间<br>只能包含字母、数字和下划线")
+			}
+		}
+	}
+})
+function registerSubmits(){
+	var text=/^[a-zA-Z]\w{5,17}$/;
+	var user=$("#loginUser1").val()+"";
+	var pass1=$("#loginPass1").val()+"";
+	var pass2=$("#loginPass2").val()+"";
+	if(user!=""&&pass1!=""&&pass2!=""){
+			if(pass1.match(text)){
+		if(pass1!=pass2){
+			$(".Module_Registered_Message").html("前后密码不一致")
+		}
+		else{
+			$
+			.ajax({
+				type : "post",
+				url : "../user/findUserByGetId",
+				data : {username:user,password1:pass1},
+				dataType : "json",
+				success : function(data) {
+
+	if(data.username=="-1"){
+		 alert("注册失败，用户名已存在")
+	}
+	else{
+			alert("注册成功");
+			Model_Switch();
+			$("#loginUser").val(data.username);
+	 } 
+
+}});  
+	}
+	}
+			else{
+		$(".Module_Registered_Message").html("密码以字母开头<br>长度在6~18之间<br>只能包含字母、数字和下划线")
+			}
+				}
+	else{
+		alert("请输入完整数据")
+	}
+return false;
+}
+   
+        function Model_Switch() {
+            var Login = document.getElementById("Model_Login");
+            var Registered = document.getElementById("Model_Registered");
+            var panel = document.getElementById("Model_Switch").getAttribute("panel");
+            if (panel == "login") {
+                Login.style = "display:none;";
+                Registered.style = "display:initial";
+
+                if (Login.getElementsByClassName("Model_RegisteredToLoginPlane")[0].getAttribute("first") == "0") {
+                    Login.getElementsByClassName("Model_RegisteredToLoginPlane")[0].setAttribute("first", "1");
+                    Login.getElementsByClassName("Model_RegisteredToLoginPlane")[0].classList.add("Model_RegisteredToLoginPlane_Animation");
+                    Login.getElementsByClassName("Model_Switch_None")[0].classList.replace("Model_Switch_None","Model_Switch_Animation");
+                }
+
+                Login.getElementsByClassName("Model_Login_Input")[0].value = "";
+                Login.getElementsByClassName("Model_Pass_Input")[0].value = "";
+                Login.getElementsByClassName("Module_Login_Message")[0].innerHTML = "";
+                var Remember = document.getElementById("Model_Remember");
+                if (Remember.getAttribute("remember") == "1") {
+                    Remember.classList.replace("Model_Remember_Icon2", "Model_Remember_Icon1");
+                    Remember.setAttribute("remember", "0");
+                }
+                document.getElementById("Model_Switch").setAttribute("panel","registered");
+            }
+            else if (panel == "registered") {
+                Registered.style = "display:none;";
+                Login.style = "display:initial";
+                Registered.getElementsByClassName("Model_Login_Input")[0].value = "";
+                Registered.getElementsByClassName("Model_Pass_Input")[0].value = "";
+                Registered.getElementsByClassName("Model_PassConfirm_Input")[0].value = "";
+                Registered.getElementsByClassName("Module_Registered_Message")[0].innerHTML = "";
+                document.getElementById("Model_Switch").setAttribute("panel", "login");
+            }
+        }
+
+        function Model_Login() {
+            var Login = document.getElementById("Model_Login");
+            var Remember = document.getElementById("Model_Remember");
+            Login.getElementsByClassName("Model_Login_Input")[0].value = "";
+            Login.getElementsByClassName("Model_Pass_Input")[0].value = "";
+            Login.getElementsByClassName("Module_Login_Message")[0].innerHTML = "";
+            Remember.getAttribute("remember");
+        }
+
+        function Model_Registered() {
+            var Registered = document.getElementById("Model_Registered");
+            Registered.getElementsByClassName("Model_Login_Input")[0].value = "";
+            Registered.getElementsByClassName("Model_Pass_Input")[0].value = "";
+            Registered.getElementsByClassName("Model_PassConfirm_Input")[0].value = "";
+            Registered.getElementsByClassName("Module_Registered_Message")[0].innerHTML = "";
+        }
+
+
+        function Model_Remember() {
+            var Remember = document.getElementById("Model_Remember");
+            var remember = Remember.getAttribute("remember");
+            if (remember == "0") {
+                Remember.classList.replace("Model_Remember_Icon1", "Model_Remember_Icon2");
+                Remember.setAttribute("remember", "1");
+            }
+            else if (remember == "1") {
+                Remember.classList.replace("Model_Remember_Icon2", "Model_Remember_Icon1");
+                Remember.setAttribute("remember", "0");
+            }
+        }
+      //将用户名密码放入cookie
+        function setCookie(username, password, c_time) {
+            document.cookie = username + "=" + password + ";max-age=" + c_time;
+        }
+
+        //将用户名密码从cookie中取出
+        function getCookie(c_key) {
+        	var arr = document.cookie.split("; ");
+            if(hasCookieWithKey(c_key)){
+            	 for(var i=0;i<arr.length;i++){
+            		 var temp = arr[i].split("=");
+            		 if(temp[0].trim() === c_key){
+            			 return temp[1];
+            		 }
+            	 }
+            }
+            else{
+                return null;
+            }
+        }
+        //修改
+        function updataCookie(c_key, v_val){
+        	if(hasCookieWithKey(c_key)){
+        		document.cookie = c_key + "=" +v_val;
+        	}
+        }
+
+        //删除
+        function deleteCookieWithKey(c_key){
+            setCookie(c_key,"",-1);
+        }
+
+        //是否含有某个键名
+        function hasCookieWithKey(c_key){ 
+        	var arr = document.cookie.split("; "); 
+        	for(var i=0;i<arr.length;i++){ 
+        		var temp = arr[i].split("="); 
+        		if(temp[0].trim() === c_key){ 
+        			return true; 
+        			} 
+        		} 
+        	return false; 
+        	}
+    </script>
+</body>
+</html>
